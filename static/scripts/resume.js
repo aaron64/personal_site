@@ -19,6 +19,28 @@ $(document).ready(function(){
 
 	  	return array;
 	}
+          /*<div class="card mt-3 mb-3">
+            <h5 class="card-header">University of Florida</h5>
+            <div class="card-body">
+              <p class="card-text">I am a current student persuing a B.S in Computer Science.</p>
+            </div>
+          </div>*/
+	// propegate cards
+	$.getJSON( "/static/json/cards.json", function( data ) {
+		var cards = []
+		$.each(data, function( i, obj ) {
+			c = "<div class='card mt-3 mb-3'>" + 
+				"<h5 class='card-header'>" + obj["name"] + "</h5>" +
+				"<div class='card-body'>" + 
+				"<div><i class='far fa-calendar-alt mr-2'></i>" + obj["time"] + "</div>" +
+				"<div><i class='far fa-user mr-2'></i>" + obj["position"] + "</div>" +
+				"</div></div>"
+			cards.push({"obj":c, "type":obj["type"]})
+		})
+		cards.forEach(function(card) {
+			$(".card-" + card["type"]).append(card["obj"])
+		})
+	})
 
 	// propegate technologies chips
     $.getJSON( "/static/json/tech.json", function( data ) {
