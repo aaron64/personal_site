@@ -13,97 +13,81 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="{{
+  url_for('static', filename='css/theme.css') }}"></link>
+
+  <style>
+    a {
+      text-decoration: underline;
+      color: #000;
+    }
+    .header {
+
+    }
+  </style>
 </head> 
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h1>Aaron Chambers</h1>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="pull-right">aaron.chambers81@gmail.com</div>
+      <div class="header">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Aaron Chambers</h1>
+          </div>
+          <div class="col-md-6"> 
+            <div class="row">
+              <div class="col-md-6">
+                <div class="float-right">aaron.chambers81@gmail.com</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="float-right">(352)283-1401</div>
+              </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="pull-right">(352)283-1401</div>
-            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <a href="https://github.com/aaron64">Github</a>
+          </div>
+          <div class="col-md-6 text-center">
+            <a href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/">LinkedIn</a>
           </div>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <h2>Education</h2>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <h2>Work Experience</h2>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <h2>Technologies</h2>
           <div class="row">
-            <div class="col-md-4">
-              <div class="row"><button type="button" class="btn btn-outline-primary">C++</button></div>
-              <div class="row"><button type="button" class="btn btn-outline-primary">Java</button></div>
-              <div class="row"><button type="button" class="btn btn-outline-primary">Python</button></div>
-              <div class="row"><button type="button" class="btn btn-outline-primary">Web</button></div>
-              <div class="row"><button type="button" class="btn btn-outline-primary">OS</button></div>
-              <div class="row"><button type="button" class="btn btn-outline-primary">Misc</button></div>
+            <div class="col-md-2 technologies-keys">
+              <div class="row form-group"><button type="button" class="btn btn-success technology-key" data-tech='CPP' data-techCol='success'>C++</button></div>
+              <div class="row form-group"><button type="button" class="btn btn-primary technology-key" data-tech='Java' data-techCol='primary'>Java</button></div>
+              <div class="row form-group"><button type="button" class="btn btn-danger technology-key" data-tech='Python' data-techCol='danger'>Python</button></div>
+              <div class="row form-group"><button type="button" class="btn btn-warning technology-key" data-tech='Web' data-techCol='warning'>Web</button></div>
+              <div class="row form-group"><button type="button" class="btn btn-secondary technology-key" data-tech='OS' data-techCol='secondary'>OS</button></div>
+              <div class="row form-group"><button type="button" class="btn btn-dark technology-key" data-tech='Misc' data-techCol='dark'>Misc</button></div>
             </div>
-            <div class="col-md-8">
-              <div class="row">
-                <button type="button" class="btn btn-outline-primary">SFML</button>
-                <button type="button" class="btn btn-outline-primary">Game Dev</button>
-                <button type="button" class="btn btn-outline-primary">Spring</button>
-                <button type="button" class="btn btn-outline-primary">Android Dev</button>
-                <button type="button" class="btn btn-outline-primary">Flask</button>
-                <button type="button" class="btn btn-outline-primary">RtMidi</button>
-              </div>
-              <div class="row">
-                <div class="col-md-12">
-                  <button type="button" class="btn btn-outline-primary">Pyglet</button>
-                  <button type="button" class="btn btn-outline-primary">JavaScript</button>
-                  <button type="button" class="btn btn-outline-primary">SQL</button>
-                  <button type="button" class="btn btn-outline-primary">NPM</button>
-                  <button type="button" class="btn btn-outline-primary">Bootstrap</button>
-                  <button type="button" class="btn btn-outline-primary">HTML5</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-8">
-                <button type="button" class="btn btn-outline-primary">GCP</button>
-                <button type="button" class="btn btn-outline-primary">OpenStack</button>
-                <button type="button" class="btn btn-outline-primary">Concourse</button>
-                <button type="button" class="btn btn-outline-primary">CSS</button>
-                <button type="button" class="btn btn-outline-primary">Docker</button>
-                <button type="button" class="btn btn-outline-primary">Bash</button>
-              </div>
-              </div>
-                <div class="row">
-                  <div class="col-md-8">
-                  <button type="button" class="btn btn-outline-primary">Raspberry Pi</button>
-                  <button type="button" class="btn btn-outline-primary">Soldering</button>
-                  <button type="button" class="btn btn-outline-primary">Arduino</button>
-                  <button type="button" class="btn btn-outline-primary">Home Automation</button>
-                </div>
-              </div>
-                <div class="row">
-                  <div class="row"><button type="button" class="btn btn-outline-primary">C++</button></div>
-                </div>
-              <div class="row">
-                <div class="row"><button type="button" class="btn btn-outline-primary">C++</button></div>
-              </div>
+            <div class="col-md-8 technologies-values">
+
             </div>
           </div>
         </div>
       </div>
     </div>
+  <script type=text/javascript src="{{
+  url_for('static', filename='scripts/resume.js') }}"></script>
   </body>
 </html>
