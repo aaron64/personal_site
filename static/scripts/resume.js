@@ -19,12 +19,6 @@ $(document).ready(function(){
 
 	  	return array;
 	}
-          /*<div class="card mt-3 mb-3">
-            <h5 class="card-header">University of Florida</h5>
-            <div class="card-body">
-              <p class="card-text">I am a current student persuing a B.S in Computer Science.</p>
-            </div>
-          </div>*/
 	// propegate cards
 	$.getJSON( "/static/json/cards.json", function( data ) {
 		var cards = []
