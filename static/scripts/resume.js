@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
 	function shuffle(array) {
 	  	var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -69,17 +68,17 @@ $(document).ready(function(){
 		items = shuffle(items)
 
 		while(items.length > 0) {
-			app = "<div class='row form-group'>"
+			btn_list = "<div class='row form-group'>"
 			for(i = 0; i < 6; i++) {
-				app += items.pop()
+				btn_list += items.pop()
 				if(items.length <= 0) {
 					break
 				}
 			}
-			app += "</div>"
-			$(".technologies-values").append(app)
+			btn_list += "</div>"
+			$(".technologies-values").append(btn_list)
 		}
-	});
+	})
 
 	$(".technology-key").hover(
 		function() {

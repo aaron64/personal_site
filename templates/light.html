@@ -1,34 +1,23 @@
-<!doctype html>
-<html>
-<head>
-  <title>Aaron Chambers - Light</title> 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-</head> 
-  <body>
-    <div class="container">
-      <h1>Light</h1>
-      <p>This is some text.</p> 
-      <div class="row color-selector">
-        <div class="col-md-4">
-        </div>
-        <div class="col-md-1">
-		<a href=# class='btn-light-on'><button type="button" class="btn btn-light">On</button></a>
-        </div>
-        <div class="col-md-1">
-		<a href=# class='btn-light-off'><button type="button" class="btn btn-dark">Off</button></a>
-        </div>
+  <div class="container">
+    <h1>Light</h1>
+    <p>This is some text.</p> 
+    <div class="col-md-12 color-selector">
+    	<div class='row form-group'>
+              <div class="col-md-1">
+    		<a href=# class='btn-light-on'><button type="button" class="btn btn-light">On</button></a>
+              </div>
+              <div class="col-md-1">
+    		<a href=# class='btn-light-off'><button type="button" class="btn btn-dark">Off</button></a>
+              </div>
+    	</div>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        <input id="brightness-slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
       </div>
     </div>
-  <script type=text/javascript src="{{ url_for('static', filename='scripts/light.js') }}"></script>
-  </body>
-</html>
+  </div>
+<script type=text/javascript src="{{ url_for('static', filename='scripts/light.js') }}"></script>
+</body>
+

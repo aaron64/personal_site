@@ -1,87 +1,37 @@
-<!doctype html>
-<html>
-<head>
-  <title>Aaron Chambers</title> 
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2><i class="fas fa-university mr-2"></i>Education</h2>
+      </div>
+      <div class="row card-education">
+      </div>
+    </div>
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2><i class="far fa-building mr-2"></i>Work Experience</h2>
+      </div>
+      <div class="row card-work">
+      </div>
+    </div>
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-
-  <!-- FontAwesome icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}"></link>
-
-  <style>
-    body { 
-      padding-top: 75px; 
-    }
-  </style>
-</head> 
-  <body>
-    <div class="container">
-      <div class="header">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar">
-          <div class="container">
-            <a class="navbar-brand mr-1 mb-1 mt-0" href="#">Aaron Chambers</a>
-            <div class="navbar-collapse collapse justify-content-center">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://github.com/aaron64/">Github</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/">LinkedIn</a>
-                </li>
-              </ul>
-            </div>
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <h2><i class="fas fa-code mr-2"></i>Skills</h2>
+        <div class="row">
+          <div class="col-md-2 technologies-keys">
+            <div class="row form-group"><button type="button" class="btn btn-success technology-key" data-tech='CPP' data-techCol='success'>C++</button></div>
+            <div class="row form-group"><button type="button" class="btn btn-primary technology-key" data-tech='Java' data-techCol='primary'>Java</button></div>
+            <div class="row form-group"><button type="button" class="btn btn-danger technology-key" data-tech='Python' data-techCol='danger'>Python</button></div>
+            <div class="row form-group"><button type="button" class="btn btn-warning technology-key" data-tech='Web' data-techCol='warning'>Web</button></div>
+            <div class="row form-group"><button type="button" class="btn btn-secondary technology-key" data-tech='OS' data-techCol='secondary'>OS</button></div>
+            <div class="row form-group"><button type="button" class="btn btn-dark technology-key" data-tech='Misc' data-techCol='dark'>Misc</button></div>
           </div>
-        </nav>
-      </div>
+          <div class="col-md-10 technologies-values">
 
-      <div class="row mb-3">
-        <div class="col-md-12">
-          <h2><i class="fas fa-university mr-2"></i>Education</h2>
-        </div>
-        <div class="row card-education">
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-md-12">
-          <h2><i class="far fa-building mr-2"></i>Work Experience</h2>
-        </div>
-        <div class="row card-work">
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-md-12">
-          <h2><i class="fas fa-code mr-2"></i>Skills</h2>
-          <div class="row">
-            <div class="col-md-2 technologies-keys">
-              <div class="row form-group"><button type="button" class="btn btn-success technology-key" data-tech='CPP' data-techCol='success'>C++</button></div>
-              <div class="row form-group"><button type="button" class="btn btn-primary technology-key" data-tech='Java' data-techCol='primary'>Java</button></div>
-              <div class="row form-group"><button type="button" class="btn btn-danger technology-key" data-tech='Python' data-techCol='danger'>Python</button></div>
-              <div class="row form-group"><button type="button" class="btn btn-warning technology-key" data-tech='Web' data-techCol='warning'>Web</button></div>
-              <div class="row form-group"><button type="button" class="btn btn-secondary technology-key" data-tech='OS' data-techCol='secondary'>OS</button></div>
-              <div class="row form-group"><button type="button" class="btn btn-dark technology-key" data-tech='Misc' data-techCol='dark'>Misc</button></div>
-            </div>
-            <div class="col-md-10 technologies-values">
-
-            </div>
           </div>
         </div>
       </div>
     </div>
-  <script type=text/javascript src="{{
-  url_for('static', filename='scripts/resume.js') }}"></script>
-  </body>
-</html>
+  </div>
+<script type=text/javascript src="{{url_for('static', filename='scripts/resume.js') }}"></script>
+</body>
