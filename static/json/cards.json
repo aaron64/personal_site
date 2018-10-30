@@ -3,7 +3,8 @@
 		"name": "University of Florida",
 		"type": "education",
 		"time": "2016 - Present",
-		"position": "Computer Science student"
+		"position": "Computer Science student",
+		"bullets": ["GPA: 3.3", "Graduating April 2019"]
 	},
 	{
 		"name": "Santa Fe College",
@@ -15,12 +16,14 @@
 		"name": "Ultimate Software Internship",
 		"type": "work",
 		"time": "Summer 2018",
-		"position": "Architecture Team"
+		"position": "Architecture Team",
+		"bullets": ["Worked on creating scripts to easily spin up VMs on the cloud in order to provide test environments.", "Mainly utilized Docker, OpenStack, Concourse, and Hashcorp Vault"]
 	},
 	{
 		"name": "Ultimate Software Internship",
 		"type": "work",
 		"time": "Summer 2017",
-		"position": "Internal Software Team"
+		"position": "Internal Software Team",
+		"bullets": ["Created a new change management website for employees to submit change requests", "Used Angular, Bower, and Bootstrap on the front-end", "Worked with C# SQL on the back-end"]
 	}
 ]
