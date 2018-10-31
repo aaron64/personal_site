@@ -13,10 +13,10 @@ def index():
     site += render_template("footer.html")
     return site
 
-@app.route('/projects')
-def projects():
+@app.route('/projects/<p>')
+def projects(p = None):
     site = render_template("header.html")
-    site += render_template("projects.html")
+    site += render_template("projects.html", project=p)
     site += render_template("footer.html")
     return site
 

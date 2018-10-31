@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+
+	$.getJSON( "/static/json/projects.json", function( data ) {
+		proj_data = 0
+		$.each(data, function( i, obj) {
+			if(obj["path_name"]) {
+				proj_data = obj;
+			}
+		})
+
+		$('.project-header').text(proj_data['name'])
+		$('.project-type').text(proj_data['type'])
+	})
+
+
 	CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
 		if (w < 2 * r) r = w / 2;
 		if (h < 2 * r) r = h / 2;
@@ -14,13 +28,13 @@ $(document).ready(function(){
 	}
 
 	var c = document.getElementById("gol-canvas");
-	w = screen.width
-	h = screen.height
+	w = Math.max(screen.width, $(document).width())
+	h = Math.max(screen.height, $(document).height())
 	c.width = w
 	c.height = h
 
 	cell_s = 50
-	cell_col = "#CBE4FF"
+	cell_col = "#FFE69B"
 
 	cells_x = Math.ceil(w/cell_s)
 	cells_y = Math.ceil(h/cell_s)

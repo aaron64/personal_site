@@ -3,6 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Aaron Chambers</title> 
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -45,7 +46,7 @@
                 <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('projects') }}">Projects</a>
+                <a class="nav-link" href="{{ url_for('projects', p='ein') }}">Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('light') }}">Light</a>
