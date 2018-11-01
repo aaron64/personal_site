@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#ffc107" />
   <title>Aaron Chambers</title> 
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
@@ -42,11 +43,18 @@
           <a class="navbar-brand mr-1 mb-1 mt-0" href="#">Aaron Chambers</a>
           <div class="navbar-collapse collapse justify-content-center">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Projects
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="layoutDd">
+                      <a class="dropdown-item px-2" href="{{ url_for('projects', p='ein') }}">Ein</a>
+                      <a class="dropdown-item px-2" href="{{ url_for('projects', p='honeyDo') }}">HoneyDo</a>
+                      <a class="dropdown-item px-2" href="{{ url_for('projects', p='cm2.0') }}">Change Management 2.0</a>
+                  </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('projects', p='ein') }}">Projects</a>
+                <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('light') }}">Light</a>

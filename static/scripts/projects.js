@@ -1,18 +1,9 @@
 $(document).ready(function(){
 
-
-	$.getJSON( "/static/json/projects.json", function( data ) {
-		proj_data = 0
-		$.each(data, function( i, obj) {
-			if(obj["path_name"]) {
-				proj_data = obj;
-			}
-		})
-
-		$('.project-header').text(proj_data['name'])
-		$('.project-type').text(proj_data['type'])
+	$(".expandable").click(function(){
+		$('.modal-body').empty().append($(this).clone().width("300%"))
+		$(".modal").modal('toggle')
 	})
-
 
 	CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
 		if (w < 2 * r) r = w / 2;
