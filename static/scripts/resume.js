@@ -23,10 +23,14 @@ $(document).ready(function(){
 		var cards = []
 		$.each(data, function( i, obj ) {
 			c = "<div class='card mt-3 mb-3'>" + 
-				"<h5 class='card-header'>" + obj["name"] + "</h5>" +
+				"<h5 class='card-header text-center text-danger mb-2'>" + obj["name"] + "</h5>" +
 				"<div class='card-body'>" + 
+				"<div class='row'>" +
+				"<div class='col-md-6 text-center'>" +
 				"<div><i class='far fa-calendar-alt mr-2'></i>" + obj["time"] + "</div>" +
-				"<div><i class='far fa-user mr-2'></i>" + obj["position"] + "</div>" + "<ul>"
+				"</div><div class='col-md-6 text-center'>" +
+				"<div><i class='far fa-user mr-2'></i>" + obj["position"] + "</div>" +
+				"</div></div><ul>"
 				$.each(obj["bullets"], function( i, b ){
 					c += "<li>" + b + "</li>"
 				})

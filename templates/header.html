@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#ffc107" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Aaron Chambers</title> 
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 
@@ -25,20 +25,30 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}"></link>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme-litera-custom.css') }}"></link>
 
   <script type=text/javascript src="{{url_for('static', filename='scripts/main.js') }}"></script>
 
   <style>
-    body { 
-      padding-top: 75px; 
+    html, body {
+      overflow-x: hidden;
+    }
+    @media (min-width: 576px) {
+      body {
+        margin-top: 75px;
+      }
+    }
+
+    .nav-phone {
+      margin-right: -15px;
+      margin-left: -15px;
     }
   </style>
 </head> 
 <body style='display: none'>
-  <div class="container">
+  <div class="container-fluid">
     <div class="header">
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-desktop d-none d-sm-none d-md-flex" id="navbar">
         <div class="container">
           <a class="navbar-brand mr-1 mb-1 mt-0" href="#">Aaron Chambers</a>
           <div class="navbar-collapse collapse justify-content-center">
@@ -65,6 +75,42 @@
               <li class="nav-item">
                 <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
               </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-phone d-block d-sm-none mb-5" id="navbar">
+        <div class="container">
+          <div class="navbar-collapse justify-content-center">
+            <ul class="navbar-nav ml-auto">
+              <div class="row">
+                <div class="col-8"><a class="navbar-brand mr-1 mb-1 mt-0" href="#">Aaron Chambers</a></div>
+                <div class="col-2 nav-item text-right pr-0">
+                  <a class="nav-link" target="_blank" href="https://github.com/aaron64/"><i class="fab fa-github" style="font-size:24px"></i></a>
+                </div> 
+                <div class="col-2 nav-item text-center pl-0">
+                  <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
+                </div>
+              </div>
+              <div class="row"> 
+                <div class="col-4 nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="layoutDd">
+                        <a class="dropdown-item px-2" href="{{ url_for('projects', p='ein') }}">Ein</a>
+                        <a class="dropdown-item px-2" href="{{ url_for('projects', p='honeyDo') }}">HoneyDo</a>
+                        <a class="dropdown-item px-2" href="{{ url_for('projects', p='cm2.0') }}">Change Management 2.0</a>
+                    </div>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link" href="{{ url_for('light') }}">Light</a>
+                </div>
+              </div> 
             </ul>
           </div>
         </div>

@@ -1,17 +1,5 @@
 [
-	{
-		"name": "University of Florida",
-		"type": "education",
-		"time": "2016 - Present",
-		"position": "Computer Science student",
-		"bullets": ["GPA: 3.3", "Graduating April 2019"]
-	},
-	{
-		"name": "Santa Fe College",
-		"type": "education",
-		"time": "2014 - 2016",
-		"position": "Associates Degree"
-	},
+
 	{
 		"name": "Ultimate Software Internship",
 		"type": "work",
