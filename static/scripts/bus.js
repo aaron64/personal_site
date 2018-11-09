@@ -1,10 +1,9 @@
 $(document).ready(function(){
 	var result = 0;
-	route_id_12 = 4001170
-	route_id_37 = 4008432
+	route_id_12 = "4001170"
+	route_id_37 = "4008432"
 
-	time_lower = 10
-	time_upper = 15
+	timespan = 40;
 
 	buses = []
 
@@ -18,21 +17,22 @@ $(document).ready(function(){
 				delta = Math.floor((json.arrivals[i].timestamp-now)/(60))
 
 				col = '';
-				switch(json.route_id) {
-					case route_id_12:
-						col = '#E83E8C'
-					case route_id_37:
-						col = '#FD7E14'
-					default:
-						col = '#4582EC'
+
+				route = json.arrivals[i].route_id
+				if(route == route_id_12){
+					col = "#E83E8C"
+				} else if(route == route_id_37) {
+					col = "#FD7E14"
+				} else {
+					col = "#4582EC"
 				}
 
-				buses.push({time: delta, route: json.route_id, color: col})
+				buses.push({time: delta, route: route, color: col})
 			}
 			buses = buses.sort(compare_times).slice(0,Math.min(json.arrivals.length,3));
 
 			for(var i = 0; i < buses.length; i++) {
-				alert(buses[i].time)
+				//alert(buses[i].time)
 			}
 			runCanvas();
         }
@@ -43,6 +43,10 @@ $(document).ready(function(){
     	w = canvas.width
     	h = canvas.height
     	ctx = canvas.getContext("2d")
+
+    	ctx.font = "18px Arial";
+		ctx.fillText(timespan + " Min",5,60);
+
     	ctx.fillStyle="#BBB"
     	ctx.lineCap = "round"
 
@@ -55,7 +59,7 @@ $(document).ready(function(){
    		ctx.stroke()
    
    		for(var i = 0; i < buses.length; i++) {
-   			var pos = (w * 0.8) - (buses[i].time / 40) * (w * 0.8)
+   			var pos = (w * 0.8) - (buses[i].time / timespan) * (w * 0.8)
 			circle(buses[i].color, pos)
    		}
  
