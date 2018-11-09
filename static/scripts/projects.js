@@ -5,7 +5,7 @@ $(document).ready(function(){
 		$(".modal").modal('toggle')
 	})
 
-	CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+	/*CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
 		if (w < 2 * r) r = w / 2;
 		if (h < 2 * r) r = h / 2;
 		this.beginPath();
@@ -25,7 +25,6 @@ $(document).ready(function(){
 	c.height = h
 
 	cell_s = 50
-	cell_col = "#FFE69B"
 
 	cells_x = Math.ceil(w/cell_s)
 	cells_y = Math.ceil(h/cell_s)
@@ -95,5 +94,5 @@ $(document).ready(function(){
 		setTimeout(run, 1)
 	}
 	t = 0
-	run()
+	run()*/
 })

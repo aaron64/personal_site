@@ -36,7 +36,7 @@ $(document).ready(function(){
 			}
 			
 
-			items.push("<div class='col-md-1'>" + 
+			items.push("<div class='col-md-4'>" + 
 				"<a href='#' class='btn-col'>" + 
 				"<button type='button' style='background-color: rgb(" + 
 				color["R"] + "," + color["G"] + "," + color["B"] + 
@@ -45,7 +45,7 @@ $(document).ready(function(){
 		})
 
 		while(items.length > 0) {
-			app = "<div class='row form-group'>"
+			app = "<div class='row form-group justify-content-center'>"
 			for(i = 0; i < 3; i++) {
 				app += items.pop()
 				if(items.length <= 0)

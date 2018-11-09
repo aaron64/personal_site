@@ -20,10 +20,10 @@ def projects(p = None):
     site += render_template("footer.html")
     return site
 
-@app.route('/light')
-def light():
+@app.route('/tools')
+def tools():
     site = render_template("header.html")
-    site += render_template("light.html")
+    site += render_template("tools.html")
     site += render_template("footer.html")
     return site
 
