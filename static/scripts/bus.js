@@ -16,18 +16,21 @@ $(document).ready(function(){
 			{
 				delta = Math.floor((json.arrivals[i].timestamp-now)/(60))
 
-				col = '';
+				col = ''
+				n = ''
 
 				route = json.arrivals[i].route_id
 				if(route == route_id_12){
+					n = "12"
 					col = "#E83E8C"
 				} else if(route == route_id_37) {
+					n = "37"
 					col = "#FD7E14"
 				} else {
 					col = "#4582EC"
 				}
 
-				buses.push({time: delta, route: route, color: col})
+				buses.push({name: n, time: delta, route: route, color: col})
 			}
 			buses = buses.sort(compare_times).slice(0,Math.min(json.arrivals.length,3));
 
@@ -35,6 +38,7 @@ $(document).ready(function(){
 				//alert(buses[i].time)
 			}
 			runCanvas();
+			showInfo();
         }
     });
 
@@ -47,7 +51,7 @@ $(document).ready(function(){
     	ctx.font = "18px Arial";
 		ctx.fillText(timespan + " Min",5,60);
 
-    	ctx.fillStyle="#BBB"
+    	ctx.strokeStyle="#888"
     	ctx.lineCap = "round"
 
     	ctx.moveTo(5,30)
@@ -70,6 +74,16 @@ $(document).ready(function(){
 			ctx.arc(x,30,10,0,2*Math.PI);
 			ctx.fill();
 	    }
+    }
+
+    function showInfo() {
+    	for(var i = 0; i < buses.length; i++) {
+    		var b = "<div class='row mb-3'><div class='mr-3'>" + 
+    			"<i class='fas fa-bus' style='color:" + buses[i].color + "'></i></div>" +
+    			"<div class='col-9' style='border-left: 1px solid #000'>" + buses[i].name + " Arrival: " + buses[i].time + " minutes" + "</div>"
+    			"</div>"
+    		$(".bus-info").append(b)
+    	}
     }
 
 	function compare_times(a,b) {
