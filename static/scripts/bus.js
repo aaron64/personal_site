@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 	var now = new Date()/1000;
 	$.ajax({
-        url: 'https://feeds.transloc.com/3/arrivals?agencies=116&stop_id=4091666',
+        url: 'https://feeds.transloc.com/3/arrivals?agencies=116&stop_id=4195938',
         dataType: 'json',
         success: function(json) {    
 	        for(var i = 0; i < json.arrivals.length; i++)
@@ -45,6 +45,7 @@ $(document).ready(function(){
     function runCanvas() {
     	canvas = document.getElementById("canvas")
     	w = canvas.width
+    	canvas.height = 75
     	h = canvas.height
     	ctx = canvas.getContext("2d")
 
