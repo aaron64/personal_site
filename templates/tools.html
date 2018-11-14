@@ -1,0 +1,43 @@
+  <div class="row justify-content-center">
+    <div class="card light-card mr-3">
+      <div class="card-header">
+        <h1 class="text-center">Light</h1>
+      </div>
+      <div class="card-body">
+        <div class="col-md-12 color-selector">
+          <div class='row form-group'>
+            <div class="col-md-6 justify-content-center">
+              <a href=# class='btn-light-on'><button type="button" class="btn btn-light">On</button></a>
+            </div>
+            <div class="col-md-6 justify-content-center">
+              <a href=# class='btn-light-off'><button type="button" class="btn btn-dark">Off</button></a>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-md-12'>
+            <input id="brightness-slider" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="75"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bus-card ml-3">
+      <div class="card-header">
+        <h1 class="text-center">Bus</h1>
+      </div>
+      <div class="card-body">
+        <div class="row canvas-container">
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="bus-info">
+
+        </div>
+      </div>
+    </div>    
+
+
+  </div>
+</div>
+<script type=text/javascript src="{{ url_for('static', filename='scripts/light.js') }}"></script>
+<script type=text/javascript src="{{ url_for('static', filename='scripts/bus.js') }}"></script>
