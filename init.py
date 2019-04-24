@@ -6,10 +6,21 @@ from static.python.magichome import MagicHomeApi
 
 app = Flask(__name__)
 
+def render_header():
+    return render_template("header.html")
+
+
 @app.route('/')
 def index():
     site = render_template("header.html")
     site += render_template("index.html")
+    site += render_template("footer.html")
+    return site
+
+@app.route('/projects/')
+def projects_empty():
+    site = render_template("header.html")
+    site += render_template("projects.html", project=None)
     site += render_template("footer.html")
     return site
 

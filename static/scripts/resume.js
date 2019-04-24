@@ -45,6 +45,8 @@ $(document).ready(function(){
 	// propegate technologies chips
     $.getJSON( "/static/json/tech.json", function( data ) {
     	var items = []
+			var items_mobile = []
+
 		$.each( data, function( key, val ) {
 			for(i = 0; i < val.length; i++) {
 				color = ""
@@ -69,22 +71,31 @@ $(document).ready(function(){
 						break;
 				}
 				items.push( "<button type='button' style='margin-right:20px' class='btn btn-disabled btn-outline-" + color + " tech-" + key + "' disabled>" + val[i] + "</button>" );
+				items_mobile.push( "<button type='button' style='margin-right:20px' class='btn mb-3 btn-disabled btn-outline-" + color + " tech-" + key + "' disabled>" + val[i] + "</button>" );
 			}
 		});
 
 		items = shuffle(items)
+		itmes_mobile = shuffle(items_mobile)
+
+			btn_list_mobile = "<div class='row content-phone d-block d-sm-none form-group' style='margin-left:auto; margin-right:auto;text-align:center'>"
 
 		while(items.length > 0) {
-			btn_list = "<div class='row form-group'>"
+			btn_list_desktop = "<div class='row content-desktop d-none d-sm-none d-md-flex form-group'>"
 			for(i = 0; i < 6; i++) {
-				btn_list += items.pop()
+				btn_list_desktop += items.pop()
+				btn_list_mobile += items_mobile.pop()
+
 				if(items.length <= 0) {
 					break
 				}
 			}
-			btn_list += "</div>"
-			$(".technologies-values").append(btn_list)
+			btn_list_desktop += "</div>"
+			$(".technologies-values").append(btn_list_desktop)
 		}
+
+		btn_list_mobile += "</div>"
+		$(".technologies-values").append(btn_list_mobile)
 	})
 
 	$(".technology-key").hover(
