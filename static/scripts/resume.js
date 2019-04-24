@@ -99,4 +99,36 @@ $(document).ready(function(){
     		$("."+tech_class).removeClass("btn-" + tech_color)
     		$("."+tech_class).addClass("btn-outline-" + tech_color)
   	})
+
+
+
+
+  	canvas = document.getElementById("skills-canvas")
+  	ctx = canvas.getContext("2d")
+
+  	roots = {}
+
+  	$.getJSON( "/static/json/tech.json", function( data ) {
+		$.each( data, function( key, val ) {
+			r = {
+				name: key,
+				nodes: []
+			}
+
+			roots[r.key] = r
+			for(i = 0; i < val.length; i++) {
+				n = {
+					root: key,
+					value: val[i]
+				}
+				r.nodes.push(n)
+			}
+		})
+	})
+
+		function fillCircle(x, y, r) {
+			ctx.beginPath();
+			ctx.arc(x, y, r, 0, 2 * Math.PI);
+			ctx.fill();
+		}
 });
