@@ -1,7 +1,14 @@
 {
-  "OOL": ["SFML", "Game Dev", "Spring", "Android Dev", "Java", "C++"],
-  "Python": ["Flask", "RTMidi", "Pyglet", "TensorFlow", "Pandas", "MatPlotLib"],
-  "Web": ["JavaScript", "SQL", "NPM", "Bootstrap", "HTML5", "GCP", "OpenStack", "Concourse", "CSS", "Docker"],
-  "OS": ["Bash", "Raspberry Pi", "Linux"],
-  "Misc": ["Soldering", "Arduino", "Home Automation", "Git", "Ableton", "Photoshop", "After Effects", "Audacity", "Excel"]
+	"dayToDay": [
+		"Android Dev", "Java", "C++", "Flask", 
+		"RTMidi", "Pyglet", "JavaScript", "Bootstrap", 
+		"HTML5", "CSS", "Docker","Bash", 
+		"Raspberry Pi", "Linux", "Git", "Ableton", "Photoshop", "After Effects", "Audacity", "Excel"
+	],
+	"experienceWith": [
+		"SFML", "Game Dev", "Spring", "TensorFlow", 
+		"Pandas", "MatPlotLib", "SQL", "NPM / Node", 
+		"GCP", "OpenStack", "Concourse", "Soldering",
+		"Arduino", "Home Automation"
+	]
 }

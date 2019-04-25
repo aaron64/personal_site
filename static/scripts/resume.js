@@ -44,99 +44,12 @@ $(document).ready(function(){
 
 	// propegate technologies chips
     $.getJSON( "/static/json/tech.json", function( data ) {
-    	var items = []
-			var items_mobile = []
-
-		$.each( data, function( key, val ) {
-			for(i = 0; i < val.length; i++) {
-				color = ""
-				switch(key) {
-					case "OOL":
-						color = "success"
-						break;
-					case "Python":
-						color = "danger"
-						break;
-					case "Web":
-						color = "warning"
-						break;
-					case "OS":
-						color = "secondary"
-						break;
-					case "Misc":
-						color = "dark"
-						break;
-				}
-				items.push( "<button type='button' style='margin-right:20px' class='btn btn-disabled btn-outline-" + color + " tech-" + key + "' disabled>" + val[i] + "</button>" );
-				items_mobile.push( "<button type='button' style='margin-right:20px' class='btn mb-3 btn-disabled btn-outline-" + color + " tech-" + key + "' disabled>" + val[i] + "</button>" );
-			}
+		$.each( data.dayToDay, function( key, val ) {
+			$("#dayToDayList").append("<li>" + val + "</li>")
 		});
 
-		items = shuffle(items)
-		itmes_mobile = shuffle(items_mobile)
-
-			btn_list_mobile = "<div class='row content-phone d-block d-sm-none form-group' style='margin-left:auto; margin-right:auto;text-align:center'>"
-
-		while(items.length > 0) {
-			btn_list_desktop = "<div class='row content-desktop d-none d-sm-none d-md-flex form-group'>"
-			for(i = 0; i < 6; i++) {
-				btn_list_desktop += items.pop()
-				btn_list_mobile += items_mobile.pop()
-
-				if(items.length <= 0) {
-					break
-				}
-			}
-			btn_list_desktop += "</div>"
-			$(".technologies-values").append(btn_list_desktop)
-		}
-
-		btn_list_mobile += "</div>"
-		$(".technologies-values").append(btn_list_mobile)
-	})
-
-	$(".technology-key").hover(
-		function() {
-    		tech_class = "tech-" + $(this).attr("data-tech")
-    		tech_color = "" + $(this).attr("data-techCol")
-    		$("."+tech_class).removeClass("btn-outline-" + tech_color)
-    		$("."+tech_class).addClass("btn-" + tech_color)
-  		}, function() {
-    		tech_class = "tech-" + $(this).attr("data-tech")
-    		tech_color = "" + $(this).attr("data-techCol")
-    		$("."+tech_class).removeClass("btn-" + tech_color)
-    		$("."+tech_class).addClass("btn-outline-" + tech_color)
-  	})
-
-
-
-
-  	canvas = document.getElementById("skills-canvas")
-  	ctx = canvas.getContext("2d")
-
-  	roots = {}
-
-  	$.getJSON( "/static/json/tech.json", function( data ) {
-		$.each( data, function( key, val ) {
-			r = {
-				name: key,
-				nodes: []
-			}
-
-			roots[r.key] = r
-			for(i = 0; i < val.length; i++) {
-				n = {
-					root: key,
-					value: val[i]
-				}
-				r.nodes.push(n)
-			}
-		})
-	})
-
-		function fillCircle(x, y, r) {
-			ctx.beginPath();
-			ctx.arc(x, y, r, 0, 2 * Math.PI);
-			ctx.fill();
-		}
+		$.each( data.experienceWith, function( key, val ) {
+			$("#experienceWithList").append("<li>" + val + "</li>")
+		});
+	});
 });
