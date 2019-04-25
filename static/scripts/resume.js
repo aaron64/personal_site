@@ -51,11 +51,8 @@ $(document).ready(function(){
 			for(i = 0; i < val.length; i++) {
 				color = ""
 				switch(key) {
-					case "CPP":
+					case "OOL":
 						color = "success"
-						break;
-					case "Java":
-						color = "primary"
 						break;
 					case "Python":
 						color = "danger"

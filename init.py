@@ -20,7 +20,7 @@ def index():
 @app.route('/projects/')
 def projects_empty():
     site = render_template("header.html")
-    site += render_template("projects.html", project=None)
+    site += render_template("projects.html", project="ein")
     site += render_template("footer.html")
     return site
 

@@ -1,8 +1,7 @@
 {
-  "CPP": ["SFML", "Game Dev"],
-  "Java": ["Spring", "Android Dev"],
+  "OOL": ["SFML", "Game Dev", "Spring", "Android Dev", "Java", "C++"],
   "Python": ["Flask", "RTMidi", "Pyglet", "TensorFlow", "Pandas", "MatPlotLib"],
   "Web": ["JavaScript", "SQL", "NPM", "Bootstrap", "HTML5", "GCP", "OpenStack", "Concourse", "CSS", "Docker"],
-  "OS": ["Bash", "Raspberry Pi"],
+  "OS": ["Bash", "Raspberry Pi", "Linux"],
   "Misc": ["Soldering", "Arduino", "Home Automation", "Git", "Ableton", "Photoshop", "After Effects", "Audacity", "Excel"]
 }

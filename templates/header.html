@@ -53,15 +53,8 @@
           <a class="navbar-brand mr-1 mb-1 mt-0" href="#">&lt;Aaron Chambers&gt;</a>
           <div class="navbar-collapse collapse justify-content-center">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Projects
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="layoutDd">
-                      <a class="dropdown-item px-2" href="{{ url_for('projects', p='ein') }}">Ein</a>
-                      <a class="dropdown-item px-2" href="{{ url_for('projects', p='honeyDo') }}">HoneyDo</a>
-                      <a class="dropdown-item px-2" href="{{ url_for('projects', p='cm2.0') }}">Change Management 2.0</a>
-                  </div>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('projects', p='ein') }}">Projects</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
