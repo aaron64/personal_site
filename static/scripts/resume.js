@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 	  	return array;
 	}
+
 	// propegate cards
 	$.getJSON( "/static/json/cards.json", function( data ) {
 		var cards = []
@@ -42,14 +43,14 @@ $(document).ready(function(){
 		})
 	})
 
-	// propegate technologies chips
+	// Skills
     $.getJSON( "/static/json/tech.json", function( data ) {
 		$.each( data.dayToDay, function( key, val ) {
-			$("#dayToDayList").append("<li>" + val + "</li>")
+			$(".day-to-day-" + val[1] + "-list").append("<li>" + val[0] + "</li>")
 		});
 
 		$.each( data.experienceWith, function( key, val ) {
-			$("#experienceWithList").append("<li>" + val + "</li>")
+			$(".experience-" + val[1] + "-list").append("<li>" + val[0] + "</li>")
 		});
 	});
 });

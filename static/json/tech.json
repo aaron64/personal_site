@@ -1,14 +1,15 @@
 {
 	"dayToDay": [
-		"Android Dev", "Java", "C++", "Flask", 
-		"RTMidi", "Pyglet", "JavaScript", "Bootstrap", 
-		"HTML5", "CSS", "Docker","Bash", 
-		"Raspberry Pi", "Linux", "Git", "Ableton", "Photoshop", "After Effects", "Audacity", "Excel"
+		["Android Dev", "code"], ["Java", "code"], ["C++", "code"], ["Flask", "code"],
+		["RTMidi", "code"], ["Pyglet", "code"], ["JavaScript", "code"], ["Bootstrap", "code"],
+		["HTML5", "code"], ["CSS", "code"], ["Docker", "os"], ["Bash", "os"],
+		["Raspberry Pi", "hardware"], ["Linux", "os"], ["Git", "os"], ["Ableton", "misc"], 
+		["Photoshop", "misc"], ["After Effects", "misc"], ["Audacity", "misc"], ["Excel", "misc"]
 	],
 	"experienceWith": [
-		"SFML", "Game Dev", "Spring", "TensorFlow", 
-		"Pandas", "MatPlotLib", "SQL", "NPM / Node", 
-		"GCP", "OpenStack", "Concourse", "Soldering",
-		"Arduino", "Home Automation"
+		["SFML", "code"], ["Game Dev", "code"], ["Spring", "code"], ["TensorFlow", "code"],
+		["Pandas", "code"], ["MatPlotLib", "code"], ["SQL", "code"], ["NPM / Node", "code"],
+		["GCP", "os"], ["OpenStack", "os"], ["Concourse", "os"], ["Soldering", "hardware"],
+		["Arduino", "hardware"], ["Home Automation", "hardware"], ["Angular", "code"]
 	]
 }
