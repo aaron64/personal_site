@@ -18,6 +18,7 @@ $(document).ready(function(){
 
 	  	return array;
 	}
+
 	// propegate cards
 	$.getJSON( "/static/json/cards.json", function( data ) {
 		var cards = []
@@ -42,72 +43,14 @@ $(document).ready(function(){
 		})
 	})
 
-	// propegate technologies chips
+	// Skills
     $.getJSON( "/static/json/tech.json", function( data ) {
-    	var items = []
-			var items_mobile = []
-
-		$.each( data, function( key, val ) {
-			for(i = 0; i < val.length; i++) {
-				color = ""
-				switch(key) {
-					case "CPP":
-						color = "success"
-						break;
-					case "Java":
-						color = "primary"
-						break;
-					case "Python":
-						color = "danger"
-						break;
-					case "Web":
-						color = "warning"
-						break;
-					case "OS":
-						color = "secondary"
-						break;
-					case "Misc":
-						color = "dark"
-						break;
-				}
-				items.push( "<button type='button' style='margin-right:20px' class='btn btn-disabled btn-outline-" + color + " tech-" + key + "' disabled>" + val[i] + "</button>" );
-				items_mobile.push( "<button type='button' style='margin-right:20px' class='btn mb-3 btn-disabled btn-outline-" + color + " tech-" + key + "' disabled>" + val[i] + "</button>" );
-			}
+		$.each( data.dayToDay, function( key, val ) {
+			$(".day-to-day-" + val[1] + "-list").append("<li>" + val[0] + "</li>")
 		});
 
-		items = shuffle(items)
-		itmes_mobile = shuffle(items_mobile)
-
-			btn_list_mobile = "<div class='row content-phone d-block d-sm-none form-group' style='margin-left:auto; margin-right:auto;text-align:center'>"
-
-		while(items.length > 0) {
-			btn_list_desktop = "<div class='row content-desktop d-none d-sm-none d-md-flex form-group'>"
-			for(i = 0; i < 6; i++) {
-				btn_list_desktop += items.pop()
-				btn_list_mobile += items_mobile.pop()
-
-				if(items.length <= 0) {
-					break
-				}
-			}
-			btn_list_desktop += "</div>"
-			$(".technologies-values").append(btn_list_desktop)
-		}
-
-		btn_list_mobile += "</div>"
-		$(".technologies-values").append(btn_list_mobile)
-	})
-
-	$(".technology-key").hover(
-		function() {
-    		tech_class = "tech-" + $(this).attr("data-tech")
-    		tech_color = "" + $(this).attr("data-techCol")
-    		$("."+tech_class).removeClass("btn-outline-" + tech_color)
-    		$("."+tech_class).addClass("btn-" + tech_color)
-  		}, function() {
-    		tech_class = "tech-" + $(this).attr("data-tech")
-    		tech_color = "" + $(this).attr("data-techCol")
-    		$("."+tech_class).removeClass("btn-" + tech_color)
-    		$("."+tech_class).addClass("btn-outline-" + tech_color)
-  	})
+		$.each( data.experienceWith, function( key, val ) {
+			$(".experience-" + val[1] + "-list").append("<li>" + val[0] + "</li>")
+		});
+	});
 });
