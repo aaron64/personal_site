@@ -1,12 +1,13 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+from flaskext.markdown import Markdown
 
 app = Flask(__name__)
+Markdown(app)
 
 def render_header():
     return render_template("header.html")
-
 
 @app.route('/')
 def index():

@@ -5,6 +5,16 @@
 		"url": "ein"
 	},
 	{
+		"name": "Jist!",
+		"tag": "View Article Summaries From Major Publishers",
+		"url": "jist"
+	},
+	{
+		"name": "Py-Lights",
+		"tag": "Create live visuals from MIDI to LEDs",
+		"url": "py-lights" 
+	},
+	{
 		"name": "Honey Do",
 		"tag": "Android Application",
 		"url": "honeyDo"
