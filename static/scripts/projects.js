@@ -11,7 +11,7 @@ $(document).ready(function(){
 				bg = " bg-secondary"
 			}
 			p = "<div class='card" + bg + "'>" + 
-				"<div class='card-body'>" + 
+				"<div class='card-body pt-1 pb-1'>" + 
 				"<div class='row'>" +
 				"<h5 class='mb-0'><a class='text-dark' href='" + obj["url"] + "'>" + obj["name"] + "</a></h5></div>" +
 				"<div class='row'>" + obj["tag"] + "</div>" +

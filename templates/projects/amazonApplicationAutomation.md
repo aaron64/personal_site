@@ -20,7 +20,9 @@ So I increased the limit to get more data...
 
 Finally, I wrote a python script to quickly read through each job that doesn't include some key words ("n years of industry experience", "manager", etc.)
 
-```
+
+<pre>
+<code>
 import json
 import webbrowser
 
@@ -58,7 +60,8 @@ with open("amazon_listings.txt", encoding="utf8", errors="ignore") as f:
                 print(apply_input)
             if apply_input is "y":
                 webbrowser.open(listing["url_next_step"])
-```
+</code>
+</pre>
 
 * Replying "n" skips to the next listing
 * Replying "y" opens the application in browser
