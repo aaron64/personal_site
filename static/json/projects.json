@@ -5,6 +5,11 @@
 		"url": "ein"
 	},
 	{
+		"name": "Amazon Application Automation",
+		"tag": "Automating Amazon's Application Process so I Can Find a Job",
+		"url": "amazonApplicationAutomation"
+	},
+	{
 		"name": "Jist!",
 		"tag": "View Article Summaries From Major Publishers",
 		"url": "jist"
