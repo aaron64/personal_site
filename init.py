@@ -33,8 +33,4 @@ def projects(p = None):
     site = render_template("header.html")
     site += render_template("projects.html", project=p)
     site += render_template("footer.html")
-<<<<<<< HEAD
     return site
-=======
-    return site
->>>>>>> 2d7a356f11632748428870746f69c9c2c6de66e6
