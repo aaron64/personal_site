@@ -14,11 +14,11 @@ I worked on HoneyDo with 4 other students in my Software Engineering course over
 
 <div class="row">
 	<div class="col-6">
-		<img class="d-block img-fluid" src="/static/images/honeyDo/HoneyDo_01.png">
+		<img class="d-block img-fluid img-border" src="/static/images/honeyDo/HoneyDo_01.png">
 		*Login screen*
 	</div>
 	<div class="col-6">
-		<img class="d-block img-fluid" src="/static/images/honeyDo/HoneyDo_03.png">
+		<img class="d-block img-fluid img-border" src="/static/images/honeyDo/HoneyDo_03.png">
 		*Creating a task*
 	</div>
 </div>

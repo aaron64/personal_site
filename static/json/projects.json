@@ -1,22 +1,22 @@
 [
 	{
 		"name": "Ein",
-		"tag": "Server (NAS, media server, website hosting)",
+		"tag": "Personal Server",
 		"url": "ein"
 	},
 	{
-		"name": "Amazon Application Automation",
-		"tag": "Automating Amazon's Application Process so I Can Find a Job",
+		"name": "Application Automation",
+		"tag": "Automating Amazon's Application Process",
 		"url": "amazonApplicationAutomation"
 	},
 	{
 		"name": "Jist!",
-		"tag": "View Article Summaries From Major Publishers",
+		"tag": "Article Summaries App",
 		"url": "jist"
 	},
 	{
 		"name": "Py-Lights",
-		"tag": "Create live visuals from MIDI to LEDs",
+		"tag": "MIDI to LED Live Visuals",
 		"url": "py-lights" 
 	},
 	{

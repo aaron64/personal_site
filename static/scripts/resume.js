@@ -45,12 +45,18 @@ $(document).ready(function(){
 
 	// Skills
     $.getJSON( "/static/json/tech.json", function( data ) {
-		$.each( data.dayToDay, function( key, val ) {
-			$(".day-to-day-" + val[1] + "-list").append("<li>" + val[0] + "</li>")
-		});
+		$.each( data.tech, function( key, val ) {
+			techStr = ""
 
-		$.each( data.experienceWith, function( key, val ) {
-			$(".experience-" + val[1] + "-list").append("<li>" + val[0] + "</li>")
+			if(val[2] == "day-to-day") {
+				techStr += "<b>"
+			}
+			techStr += "<div>" + val[0] + "</div>"
+			if(val[2] == "day-to-day") {
+				techStr += "</b>"
+			}
+
+			$("." + val[1] + "-col").append(techStr)
 		});
 	});
 });

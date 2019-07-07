@@ -1,6 +1,6 @@
 
-# Amazon Application Automation
-## Finding a Job With Scripts
+# Application Automation
+## Automating Amazon's Application Process
 ---
 During my job hunt, I have been applying to many postings at Amazon, unfortunately, even through filtering job type, and location, there were over 4000 job postings
 
