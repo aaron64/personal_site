@@ -14,11 +14,11 @@ Components:
 
 	* A network of 3 Raspberry Pi's running Docker Swarm. The cluster is used mainly for running this website and for being used as a test environment.
 
-<img class="d-block img-border" src="/static/images/ein/diagram.png">
+<img class="d-block img-fluid img-border" src="/static/images/ein/diagram.png">
 *Diagram of network layout*
 
-<img class="d-block img-border" style="width:412px" src="/static/images/ein/ein0.jpg">
+<img class="d-block img-fluid img-border" style="width:412px" src="/static/images/ein/ein0.jpg">
 *Pi cluster*
 
-<img class="d-block img-border" style="width:412px" src="/static/images/ein/ein1.jpg">
+<img class="d-block img-fluid img-border" style="width:412px" src="/static/images/ein/ein1.jpg">
 *Pi cluster next to NAS server*
