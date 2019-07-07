@@ -4,11 +4,11 @@
 ---
 During my job hunt, I have been applying to many postings at Amazon, unfortunately, even through filtering job type, and location, there were over 4000 job postings
 
-<img src="/static/images/amazonApplicationAutomation/number_of_jobs.png">
+<img class="img-fluid" src="/static/images/amazonApplicationAutomation/number_of_jobs.png">
 
 Fortunately, amazon sends the application data through JSON requests
 
-<img src="/static/images/amazonApplicationAutomation/browser_network.png">
+<img class="img-fluid" src="/static/images/amazonApplicationAutomation/browser_network.png">
 
 The request only displays 10 items, luckily I found a limit in the requests URL
 

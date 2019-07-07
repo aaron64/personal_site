@@ -50,11 +50,11 @@
     <div class="header">
       <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-desktop d-none d-sm-none d-md-flex" id="navbar">
         <div class="container">
-          <a class="navbar-brand mr-1 mb-1 mt-0" href="#">&lt;Aaron Chambers&gt;</a>
+          <a class="navbar-brand mr-1 mb-1 mt-0" href="{{ url_for('index') }}">&lt;Aaron Chambers&gt;</a>
           <div class="navbar-collapse collapse justify-content-center">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('projects', p='ein') }}">Projects</a>
+                <a class="nav-link" href="{{ url_for('projects', p='ein') }}">Portfolio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
@@ -75,7 +75,7 @@
           <div class="navbar-collapse justify-content-center">
             <ul class="navbar-nav ml-auto">
               <div class="row">
-                <div class="col-8"><a class="navbar-brand mr-1 mb-1 mt-0" href="#">Aaron Chambers</a></div>
+                <div class="col-8"><a class="navbar-brand mr-1 mb-1 mt-0" href="{{ url_for('index') }}">Aaron Chambers</a></div>
                 <div class="col-2 nav-item text-right pr-0">
                   <a class="nav-link" target="_blank" href="https://github.com/aaron64/"><i class="fab fa-github" style="font-size:24px"></i></a>
                 </div> 
@@ -86,7 +86,7 @@
               <div class="row"> 
                 <div class="col-4 nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      Projects
+                      Portfolio
                     </a>
                     <div class="dropdown-menu projects-dropdown" aria-labelledby="layoutDd">
                     </div>
