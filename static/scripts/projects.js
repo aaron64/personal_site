@@ -13,7 +13,7 @@ $(document).ready(function(){
 			p = "<div class='card" + bg + "'>" + 
 				"<div class='card-body pt-1 pb-1'>" + 
 				"<div class='row'>" +
-				"<h5 class='mb-0'><a class='text-dark' href='" + obj["url"] + "'>" + obj["name"] + "</a></h5></div>" +
+				"<h6 class='mb-0'><a class='text-dark' href='" + obj["url"] + "'>" + obj["name"] + "</a></h6></div>" +
 				"<div class='row'>" + obj["tag"] + "</div>" +
 				"</div></div><hr class='m-0'>"
 			projects.push(p)

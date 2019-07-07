@@ -219,6 +219,11 @@ img {
   border-style: none;
 }
 
+.img-border {
+  border-radius: 12px;
+  object-fit: cover;
+}
+
 svg {
   overflow: hidden;
   vertical-align: middle;

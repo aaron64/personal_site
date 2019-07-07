@@ -70,7 +70,7 @@
         </div>
       </nav>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-phone d-block d-sm-none mb-5" id="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-phone d-block d-sm-none" id="navbar">
         <div class="container">
           <div class="navbar-collapse justify-content-center">
             <ul class="navbar-nav ml-auto">
@@ -88,10 +88,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       Projects
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="layoutDd">
-                        <a class="dropdown-item px-2" href="{{ url_for('projects', p='ein') }}">Ein</a>
-                        <a class="dropdown-item px-2" href="{{ url_for('projects', p='honeyDo') }}">HoneyDo</a>
-                        <a class="dropdown-item px-2" href="{{ url_for('projects', p='cm2.0') }}">Change Management 2.0</a>
+                    <div class="dropdown-menu projects-dropdown" aria-labelledby="layoutDd">
                     </div>
                 </div>
                 <div class="col-4 nav-item">

@@ -1,6 +1,6 @@
 
 # Jist!
-## View Article Summaries From Major Publishers
+## Article Summaries App
 ---
 Jist is a full-stack application developed with Nick Young for our senior project class
 
@@ -28,7 +28,7 @@ Supported publishers:
 <img class="d-block img-fluid" src="/static/images/jist/jist_diagram.png">
 *Diagram of back-end microservices*
 
-<img class="d-block img-fluid" src="/static/images/jist/jist_screenshot.jpg">
+<img class="d-block img-fluid img-border" src="/static/images/jist/jist_screenshot.jpg">
 *Application screenshot*
 
 
