@@ -1,14 +1,14 @@
 [
 	{
-		"name": "Application Automation",
-		"tag": "Automating Amazon's Application Process",
-		"url": "amazonApplicationAutomation",
-		"date": "29/6/2019"
-	},
-	{
 		"name": "The Magic of Boolean Operators",
 		"tag": "",
 		"url": "booleanOperators",
 		"date": "8/9/2019"
+	},
+	{
+		"name": "Application Automation",
+		"tag": "Automating Amazon's Application Process",
+		"url": "amazonApplicationAutomation",
+		"date": "29/6/2019"
 	}
 ]

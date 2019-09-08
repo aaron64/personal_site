@@ -11,7 +11,8 @@ $(document).ready(function(){
 				$(".blog-title").text(obj["name"])
 				$(".blog-description").text(obj["tag"])
 			}
-			b = "<div>" +
+
+			b = "<div class='mb-2 mt-4'>" +
 				"<div class='row justify-content-center'>" + 
 				"<div class='col-12'>" +
 				"<div class='row'><i>" + obj["date"] + "</i></div>" +

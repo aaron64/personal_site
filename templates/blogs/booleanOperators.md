@@ -1,5 +1,6 @@
 
 I am currently fasinated by boolean operators, as they can be used in programming to:
+
 * Run algorithms faster
 * Use less space
 * Create more elegant code.
@@ -30,20 +31,43 @@ This was really weird to me, why are the arguments separated by pipes? And how a
 
 After some research I realized the '|' character denoted the OR operator, and upon further investigation I found that almost all of these values were roots of 2.
 
-| Variable                     | Dec | Bin    |
-|------------------------------|-----|--------|
-| TYPE_DATETIME_VARIATION_TIME | 32  | 100000 |
-| TYPE_CLASS_TEXT              | 1   | 000001 |
-| TYPE_CLASS_DATETIME          | 4   | 000100 |
+<table class="table">
+	<tr>
+		<td>Variable</td>
+		<td>Dec</td>
+		<td>Bin</td>
+	</tr>
+	<tr>
+		<td>TYPE_DATETIME_VARIATION_TIME</td>
+		<td>32</td>
+		<td>100000</td>
+	</tr>
+	<tr>
+		<td>TYPE_CLASS_TEXT</td>
+		<td>1</td>
+		<td>000001</td>
+	</tr>
+	<tr>
+		<td>TYPE_CLASS_DATETIME</td>
+		<td>4</td>
+		<td>000100</td>
+	</tr>
+</table>
 
 So setInputType takes in 1 integer, and on the other side processes it (with AND operators) to retrieve the correct settings.
 
-```
-setInputType(TYPE_NUMBER_VARIATION_PASSWORD | TYPE_NUMBER_FLAG_SIGNED | TYPE_NUMBER_FLAG_DECIMAL); -> setInputType(00000000010000 | 01000000000000 | 10000000000000); -> setInputType(11000000010000);
-```
+<pre>
+<code>
+setInputType(TYPE_NUMBER_VARIATION_PASSWORD | TYPE_NUMBER_FLAG_SIGNED | TYPE_NUMBER_FLAG_DECIMAL);
+-> setInputType(00000000010000 | 01000000000000 | 10000000000000);
+-> setInputType(11000000010000);
+</code>
+</pre>
 
 The Android side would look something like this:
 
+<pre>
+<code>
 setInputType(int settings) {
 	...
 	numberVariationPassword = settings & 16
@@ -51,43 +75,51 @@ setInputType(int settings) {
 	numberFlagSigned = settings & 2048
 	numberFlagDecimal = settings & 4096
 }
+</code>
+</pre>
 
 This way of setting multiple booleans at once is much more elegant than passing an array or calling setType for each value
 
 ## Using less space
 One of the most simple operations we run into is the swap:
 
-```
+<pre>
+<code>
 # x = 7, y = 2
 temp = x 	# temp = 7
 x = y 		# x = 2
 y = temp 	# y = temp = 7
 print(x, y)
-```
+</code>
+</pre>
 2, 7
 
 We can reduce the space used (no temp) by doing add swap:
 
-```
+<pre>
+<code>
 # x = 7, y = 2
 x = x + y 	# x = 9
 y = x - y	# y = 7
 x = x - y	# x = 2
 
 print(x, y)
-```
+</code>
+</pre>
 2, 7
 
 However, boolean operators usually are a little faster than addition:
 
-```
+<pre>
+<code>
 # x = 7, y = 2
 x = x XOR y	# x = 5
 y = x XOR y	# y = 7
 x = x XOR y	# x = 2
 
 print(x, y)
-```
+</code>
+</pre>
 2, 7
 
 Now we have made our code a little faster and use a little less space!
@@ -103,18 +135,47 @@ a XOR 0 = a
 
 By iterating through the array and XORing everything together, all the duplicates will cancel out and I will be left with the single element that I needed. Pure magic.
 
-```
+<pre>
+<code>
 int val = 0
 for(int i = 0; i < arr.length; i++) {
 	val ^= arr[i]	# val XOR = arr[i]
 }
 return val
-```
+</code>
+</pre>
 
 arr = [2, 6, 7, 7, 2]
 
-| Variable                     | Dec | Bin    |
-|------------------------------|-----|--------|
-| TYPE_DATETIME_VARIATION_TIME | 32  | 100000 |
-| TYPE_CLASS_TEXT              | 1   | 000001 |
-| TYPE_CLASS_DATETIME          | 4   | 000100 |
+<table class="table">
+	<tr>
+		<td>i</td>
+		<td></td>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+		<td>5</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>arr[i]</td>
+		<td></td>
+		<td>2</td>
+		<td>6</td>
+		<td>7</td>
+		<td>7</td>
+		<td>2</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>val</td>
+		<td>0</td>
+		<td>2</td>
+		<td>4</td>
+		<td>3</td>
+		<td>4</td>
+		<td>6</td>
+		<td>6</td>
+	</tr>
+</table>
