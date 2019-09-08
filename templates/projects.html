@@ -5,6 +5,8 @@
 			</div>
 			<div class="pt-2 pb-2 col-md-9 col-sm-12">
 				{% if project %}
+					<h1 class="project-title"></h1>
+					<h2 class="project-description"></h2>
 					{% filter markdown %}
 						{%include ('projects/' + project + '.md') %}
 					{% endfilter %}

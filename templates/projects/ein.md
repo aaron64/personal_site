@@ -1,6 +1,4 @@
 
-# Ein
-## Personal Server
 ---
 Ein is my collection of computers used for various server-like purposes physically located in my closet.
 

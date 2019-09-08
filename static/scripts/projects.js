@@ -8,7 +8,10 @@ $(document).ready(function(){
 		$.each(data, function( i, obj ) {
 			bg = ""
 			if(obj["url"] === window.location.href.substr(window.location.href.lastIndexOf('/') + 1)) {
-				bg = " bg-secondary"
+				bg = "bg-secondary"
+
+				$(".project-title").text(obj["name"])
+				$(".project-description").text(obj["tag"])
 			}
 			p = "<div class='card" + bg + "'>" + 
 				"<div class='card-body pt-1 pb-1'>" + 

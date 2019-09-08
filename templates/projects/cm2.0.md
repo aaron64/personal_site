@@ -1,6 +1,4 @@
 
-# Change Management 2.0
-## Web Application
 ---
 I worked on this project during my frist internship at Ultimate Software. The web application is used internally to schedule and approve changes to company services. I mostly worked on the front-end with additional work handeling the API and constructing the database for the projcet.
 

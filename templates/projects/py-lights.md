@@ -1,6 +1,4 @@
 
-# Py-Lights
-## MIDI to LED Live Visuals
 ---
 
 Py-Lights (name pending...) is a python program that assigns MIDI inputs to programmable actions that in turn create effects for LED lights.
