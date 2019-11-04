@@ -5,24 +5,22 @@
 		"url": "ein"
 	},
 	{
-		"name": "Application Automation",
-		"tag": "Automating Amazon's Application Process",
-		"url": "amazonApplicationAutomation"
-	},
-	{
 		"name": "Jist!",
 		"tag": "Article Summaries App",
-		"url": "jist"
+		"url": "jist",
+		"git": "https://github.com/aaron64/Jist-App"
 	},
 	{
 		"name": "Py-Lights",
 		"tag": "MIDI to LED Live Visuals",
-		"url": "py-lights" 
+		"url": "py-lights",
+		"git": "https://github.com/aaron64/py-lights"
 	},
 	{
 		"name": "Honey Do",
 		"tag": "Android Application",
-		"url": "honeyDo"
+		"url": "honeyDo",
+		"git": "https://github.com/aaron64/honeydo5-android"
 	},
 	{
 		"name": "Change Management 2.0",

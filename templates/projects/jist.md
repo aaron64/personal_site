@@ -1,6 +1,4 @@
 
-# Jist!
-## Article Summaries App
 ---
 Jist is a full-stack application developed with Nick Young for our senior project class
 
