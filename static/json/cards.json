@@ -1,11 +1,17 @@
 [
-
+	{
+		"name": "UF Surgeon Simulation Lab",
+		"type": "work",
+		"time": "Fall 2019",
+		"position": "Research Assistant",
+		"bullets": ["Working on custom Blender plug-in (python) to export complex 3D objects and lighting to XML for use in simulation engines", "Product to be used in human and veterinarian surgeon training"]
+	},
 	{
 		"name": "Ultimate Software Internship",
 		"type": "work",
 		"time": "Summer 2018",
 		"position": "Architecture Team",
-		"bullets": ["Worked on creating scripts to easily spin up VMs on the cloud in order to provide test environments.", "Mainly utilized Docker, OpenStack, Concourse, and Hashcorp Vault"]
+		"bullets": ["Worked on creating scripts to easily spin up VMs on the cloud in order to provide test environments", "Mainly utilized Docker, OpenStack, Concourse, and Hashcorp Vault"]
 	},
 	{
 		"name": "Ultimate Software Internship",
