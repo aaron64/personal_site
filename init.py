@@ -6,6 +6,11 @@ from flaskext.markdown import Markdown
 app = Flask(__name__)
 Markdown(app)
 
+def prerender_jinja(text):
+    prerendered_body = render_template_string(Markup(text))
+    return pygmented_markdown(prerendered_body)
+app.config['FLATPAGES_HTML_RENDERER'] = prerender_jinja
+
 def render_header():
     return render_template("header.html")
 
