@@ -1,20 +1,13 @@
-html,
+@keyframes tick {
+  to {
+  	background-color: #000000;
+  }
+}
+
+.cursor {
+	animation: tick 1s steps(2,end) infinite;
+}
+
 body {
-   margin:0;
-   padding:0;
-   height:100%;
-}
-#container {
-   min-height:100%;
-   position:relative;
-}
-#header {
-   padding:10px;
-}
-#body {
-   padding:10px;
-}
-#footer {
-   bottom:0;
-   width:100%;
+	font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", Arial !important; 
 }
