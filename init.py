@@ -48,3 +48,7 @@ def blog(b = None):
     site += render_template("blog.html", blog=b)
     site += render_template("footer.html")
     return site
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')

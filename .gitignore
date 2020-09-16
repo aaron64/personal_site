@@ -4,3 +4,6 @@ node_modules/
 bower_components/
 .env
 *.pyc
+env/
+app.ini
+wsgi.py
