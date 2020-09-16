@@ -2,3 +2,4 @@ Flask-FlatPages
 Flask-Markdown
 Flask
 mistune
+flaskext
