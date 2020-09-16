@@ -12,6 +12,10 @@ $(document).ready(function(){
 
 				$(".project-title").text(obj["name"])
 				$(".project-description").text(obj["tag"])
+				if(obj["git"] != null) {
+					$(".github-button").removeClass("d-none")
+					$(".github-link").attr("href", obj["git"])
+				}
 			}
 			p = "<div class='card" + bg + "'>" + 
 				"<div class='card-body pt-1 pb-1'>" + 

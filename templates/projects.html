@@ -7,6 +7,7 @@
 				{% if project %}
 					<h1 class="project-title"></h1>
 					<h2 class="project-description"></h2>
+					<button type="button" class="github-button d-none btn btn-secondary"><a class="github-link text-light" target="_blank">Github</a></button>
 					{% filter markdown %}
 						{%include ('projects/' + project + '.md') %}
 					{% endfilter %}

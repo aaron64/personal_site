@@ -1,18 +1,14 @@
 {
+	
+
 	"tech": [
 		["Android Dev", "code", "day-to-day"],
-		["Java", "code", "day-to-day"],
-		["C++", "code", "day-to-day"],
 		["Flask", "code", "day-to-day"],
-		["JavaScript", "code", "day-to-day"],
 		["Bootstrap", "code", "day-to-day"],
-		["HTML5", "code", "day-to-day"],
-		["CSS", "code", "day-to-day"],
 		["SFML", "code", "experience-with"],
 		["Game Dev", "code", "day-to-day"],
 		["Spring", "code", "experience-with"],
 		["TensorFlow", "code", "experience-with"],
-		["SQL", "code", "experience-with"],
 		["NPM / Node", "code", "experience-with"],
 		["Angular", "code", "experience-with"],
 
@@ -34,5 +30,14 @@
 		["Soldering", "hardware", "day-to-day"],
 		["Arduino", "hardware", "day-to-day"],
 		["Home Automation", "hardware", "experience-with"]
+	],
+
+	"languages": [
+		["Java",		4],
+		["Python",		4],
+		["C++",			3],
+		["JavaScript",	4],
+		["HTML5/CSS",	4],
+		["SQL",			3]
 	]
 }

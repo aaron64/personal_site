@@ -45,18 +45,26 @@ $(document).ready(function(){
 
 	// Skills
     $.getJSON( "/static/json/tech.json", function( data ) {
+    	$.each( data.languages, function( key, val ) {
+			langStr = "<div><h5>" + val[0] + "</h5></div>"
+			langStr += "<div class='progress' style='background-color: #ffffff55;'>" +
+          	"<div class='progress-bar progress-bar-striped bg-light progress-bar-animated' role='progressbar' style='width: " + (val[1]/4)*100 + "%'></div>" +
+        	"</div>"
+			$(".languages").append(langStr)
+		});
 		$.each( data.tech, function( key, val ) {
 			techStr = ""
 
 			if(val[2] == "day-to-day") {
 				techStr += "<b>"
 			}
-			techStr += "<div>" + val[0] + "</div>"
+			techStr += "<button type='button' class='btn btn-warning m-1'>" + val[0] + "</button>"
 			if(val[2] == "day-to-day") {
 				techStr += "</b>"
 			}
 
-			$("." + val[1] + "-col").append(techStr)
+			$("." + val[1] + "-row").append(techStr)
 		});
 	});
+    
 });

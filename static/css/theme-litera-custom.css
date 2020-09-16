@@ -76,6 +76,8 @@ body {
   color: #343a40;
   text-align: left;
   background-color: #fff;
+  height: 100%;
+  min-height: 100%;
 }
 
 [tabindex="-1"]:focus {
@@ -9547,6 +9549,10 @@ p {
 
 blockquote {
   font-style: italic;
+}
+
+.allButFooter {
+  min-height: calc(100vh - 40px);
 }
 
 footer {
