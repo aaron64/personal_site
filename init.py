@@ -21,6 +21,13 @@ def index():
     site += render_template("footer.html")
     return site
 
+@app.route('/resume')
+def resume():
+    site = render_template("header.html")
+    site += render_template("resume.html")
+    site += render_template("footer.html")
+    return site
+
 @app.route('/projects/')
 def projects_empty():
     site = render_template("header.html")

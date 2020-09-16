@@ -1,5 +1,12 @@
 [
 	{
+		"name": "Pinkaloo",
+		"type": "work",
+		"time": "Winter 2020 - Present",
+		"position": "Software Engineer",
+		"bullets": ["Working on custom Blender plug-in (python) to export complex 3D objects and lighting to XML for use in simulation engines", "Product to be used in human and veterinarian surgeon training"]
+	},
+	{
 		"name": "UF Surgeon Simulation Lab",
 		"type": "work",
 		"time": "Fall 2019",

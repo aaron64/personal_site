@@ -1,0 +1,13 @@
+@keyframes tick {
+  to {
+  	background-color: #000000;
+  }
+}
+
+.cursor {
+	animation: tick 1s steps(2,end) infinite;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Source Sans Pro", Arial !important; 
+}

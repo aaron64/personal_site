@@ -20,7 +20,7 @@ $(document).ready(function(){
 	}
 
 	// propegate cards
-	$.getJSON( "/static/json/cards.json", function( data ) {
+	$.getJSON( "/static/json/work.json", function( data ) {
 		var cards = []
 		$.each(data, function( i, obj ) {
 			c = "<div class='card mt-3 mb-3'>" + 
