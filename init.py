@@ -21,6 +21,13 @@ def index():
     site += render_template("footer.html")
     return site
 
+@app.route('/resume/')
+def resume():
+    site = render_template("header.html")
+    site += render_template("resume.html")
+    site += render_template("footer.html")
+    return site
+
 @app.route('/projects/')
 def projects_empty():
     site = render_template("header.html")
@@ -35,19 +42,26 @@ def projects(p = None):
     site += render_template("footer.html")
     return site
 
-@app.route('/blog/')
-def blog_list():
+@app.route('/contact/')
+def contact():
     site = render_template("header.html")
-    site += render_template("blog.html", blog='')
+    site += render_template("contact.html")
     site += render_template("footer.html")
     return site
 
-@app.route('/blog/<b>')
-def blog(b = None):
-    site = render_template("header.html")
-    site += render_template("blog.html", blog=b)
-    site += render_template("footer.html")
-    return site
+# @app.route('/blog/')
+# def blog_list():
+#     site = render_template("header.html")
+#     site += render_template("blog.html", blog='')
+#     site += render_template("footer.html")
+#     return site
+
+# @app.route('/blog/<b>')
+# def blog(b = None):
+#     site = render_template("header.html")
+#     site += render_template("blog.html", blog=b)
+#     site += render_template("footer.html")
+#     return site
 
 
 if __name__ == "__main__":

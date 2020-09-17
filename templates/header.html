@@ -54,13 +54,13 @@
           <div class="navbar-collapse collapse justify-content-center">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('resume') }}">Resume</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('projects', p='ein') }}">Portfolio</a>
               </li>
-<!--               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('blog_list') }}">Blog</a>
-              </li> -->
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" target="_blank" href="https://github.com/aaron64/"><i class="fab fa-github" style="font-size:24px"></i></a>
@@ -86,7 +86,7 @@
                   <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
                 </div>
               </div>
-              <div class="row"> 
+              <div class="row justify-content-center"> 
                 <div class="col-4 nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                       Portfolio
@@ -96,6 +96,9 @@
                 </div>
                 <div class="col-4 nav-item">
                   <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
                 </div>
               </div> 
             </ul>

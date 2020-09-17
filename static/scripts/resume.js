@@ -48,13 +48,7 @@ $(document).ready(function(){
 		$.each( data.tech, function( key, val ) {
 			techStr = ""
 
-			if(val[2] == "day-to-day") {
-				techStr += "<b>"
-			}
 			techStr += "<div>" + val[0] + "</div>"
-			if(val[2] == "day-to-day") {
-				techStr += "</b>"
-			}
 
 			$("." + val[1] + "-col").append(techStr)
 		});
