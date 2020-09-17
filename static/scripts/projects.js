@@ -6,23 +6,11 @@ $(document).ready(function(){
 		
 
 		$.each(data, function( i, obj ) {
-			bg = ""
-			if(obj["url"] === window.location.href.substr(window.location.href.lastIndexOf('/') + 1)) {
-				bg = "bg-secondary"
-
-				$(".project-title").text(obj["name"])
-				$(".project-description").text(obj["tag"])
-			}
-			p = "<div class='card" + bg + "'>" + 
-				"<div class='card-body pt-1 pb-1'>" + 
-				"<div class='row'>" +
-				"<h6 class='mb-0'><a class='text-dark' href='" + obj["url"] + "'>" + obj["name"] + "</a></h6></div>" +
-				"<div class='row'>" + obj["tag"] + "</div>" +
-				"</div></div><hr class='m-0'>"
-			projects.push(p)
+			console.log(obj["url"])
+			//p = "{% filter markdown %} {%include ('projects/" + "py-lights" + ".md') %} {% endfilter %}"
+			//p += "{% filter markdown %}{%include ('projects/" + obj["url"] + ".md') %}{% endfilter %}"
+			//projects.push(p)
 		})
-		projects.forEach(function(projects) {
-			$(".project-list").append(projects)
-		})
+		$(".project-lists").append(projects)
 	})
 })

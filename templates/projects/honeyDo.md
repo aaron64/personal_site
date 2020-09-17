@@ -1,5 +1,4 @@
 
----
 HoneyDo is a task management android app designed for quick and intuitive user experience and privacy.
 
 HoneyDo features:
@@ -11,10 +10,6 @@ HoneyDo features:
 I worked on HoneyDo with 4 other students in my Software Engineering course over a semester. Since we split up the work I primarily designed and created the front end while also working on the API functionality to tie the front-end to the back-end.
 
 <div class="row">
-	<div class="col-6">
-		<img class="d-block img-fluid img-border" src="/static/images/honeyDo/HoneyDo_01.png">
-		<i>Login screen</i>
-	</div>
 	<div class="col-6">
 		<img class="d-block img-fluid img-border" src="/static/images/honeyDo/HoneyDo_03.png">
 		<i>Creating a task</i>

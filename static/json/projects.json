@@ -6,7 +6,7 @@
 	},
 	{
 		"name": "Jist!",
-		"tag": "Article Summaries App",
+		"tag": "Article Summarization App",
 		"url": "jist",
 		"git": "https://github.com/aaron64/Jist-App"
 	},
@@ -18,13 +18,13 @@
 	},
 	{
 		"name": "Honey Do",
-		"tag": "Android Application",
+		"tag": "Android TODO Application",
 		"url": "honeyDo",
 		"git": "https://github.com/aaron64/honeydo5-android"
 	},
 	{
 		"name": "Change Management 2.0",
-		"tag": "Web Application",
+		"tag": "Web UI for Change Management Process",
 		"url": "cm2.0"
 	}
 ]

@@ -1,5 +1,6 @@
+import os
 from flask import Flask
-from flask import render_template
+from flask import render_template, json
 from flask import request
 from flaskext.markdown import Markdown
 
@@ -31,14 +32,17 @@ def resume():
 @app.route('/projects/')
 def projects_empty():
     site = render_template("header.html")
-    site += render_template("projects.html", project="ein")
+    site += render_template("projects.html")
     site += render_template("footer.html")
     return site
 
 @app.route('/projects/<p>')
 def projects(p = None):
     site = render_template("header.html")
-    site += render_template("projects.html", project=p)
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/json", "projects.json")
+    data = json.load(open(json_url))
+    site += render_template("projects.html", projects=data)
     site += render_template("footer.html")
     return site
 
