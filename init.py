@@ -30,13 +30,6 @@ def resume():
     return site
 
 @app.route('/projects/')
-def projects_empty():
-    site = render_template("header.html")
-    site += render_template("projects.html")
-    site += render_template("footer.html")
-    return site
-
-@app.route('/projects/<p>')
 def projects(p = None):
     site = render_template("header.html")
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))

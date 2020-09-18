@@ -57,7 +57,7 @@
                 <a class="nav-link" href="{{ url_for('resume') }}">Resume</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('projects', p='ein') }}">Portfolio</a>
+                <a class="nav-link" href="{{ url_for('projects') }}">Portfolio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
@@ -87,18 +87,14 @@
                 </div>
               </div>
               <div class="row justify-content-center"> 
-                <div class="col-4 nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="layoutDd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      Portfolio
-                    </a>
-                    <div class="dropdown-menu projects-dropdown" aria-labelledby="layoutDd">
-                    </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="{{ url_for('index') }}">Resume</a>
                 </div>
                 <div class="col-4 nav-item">
-                  <a class="nav-link" href="{{ url_for('index') }}">Resume</a>
+                  <a class="nav-link text-center" href="{{ url_for('projects') }}">Portfolio</a>
                 </div>
                 <div class="col-4 nav-item">
-                  <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                  <a class="nav-link text-center" href="{{ url_for('contact') }}">Contact</a>
                 </div>
               </div> 
             </ul>
@@ -106,3 +102,4 @@
         </div>
       </nav>
     </div>
+  <div class="m-3">
