@@ -1,0 +1,11 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 blog-lists">
+  	{% for blog in blogs %}
+  		<div class="">
+	  		<h2><a href="{{ '/blog/%s'%blog.url }}">{{blog.name}}</a></h2>
+	  		<h4>{{blog.tag}}</h4>  	
+			  <hr>
+		</div>
+  	{% endfor %}
+  </div>
+</div>

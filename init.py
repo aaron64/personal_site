@@ -49,7 +49,10 @@ def contact():
 # @app.route('/blog/')
 # def blog_list():
 #     site = render_template("header.html")
-#     site += render_template("blog.html", blog='')
+#     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+#     json_url = os.path.join(SITE_ROOT, "static/json", "blogs.json")
+#     data = json.load(open(json_url))
+#     site += render_template("blogList.html", blogs=data)
 #     site += render_template("footer.html")
 #     return site
 

@@ -1,5 +1,11 @@
 [
 	{
+		"name": "HD44780 Driver for STM32F1xx",
+		"tag": "A driver for the HD44780 LCD controller",
+		"url": "HD44780",
+		"git": "https://github.com/aaron64/STM32F1xx-HD44780-Driver"
+	},
+	{
 		"name": "Ein",
 		"tag": "Personal Server",
 		"url": "ein"

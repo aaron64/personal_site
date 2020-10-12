@@ -2,8 +2,6 @@
 		<div class="row justify-content-center w-100">
 				{% if blog != '' %}
 					<div class="col-8">
-						<h1 class="blog-title"></h1>
-						<h2 class="blog-description"></h2>
 						{% filter markdown %}
 							{%include ('blogs/' + blog + '.md') %}
 						{% endfilter %}
@@ -16,4 +14,3 @@
 		</div>
 	</div>
 </div>
-<script type=text/javascript src="{{ url_for('static', filename='scripts/blog.js') }}"></script>

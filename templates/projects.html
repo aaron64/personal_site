@@ -4,6 +4,9 @@
   		<div class="">
 	  		<h2>{{project.name}}</h2>
 	  		<h4>{{project.tag}}</h4>
+	  		{% if 'git' in project %}
+	  			<a class="" target="_blank" href="{{ project.git }}"><i class="fab fa-github" style="font-size:24px"></i></a>
+	  		{% endif %}
 		  	{% filter markdown %}
 		  		{% set project_url = 'projects/' ~ project.url ~ '.md' %}
 		  		{%include (project_url) %} 

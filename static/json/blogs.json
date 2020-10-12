@@ -1,8 +1,8 @@
 [
 	{
-		"name": "Application Automation",
-		"tag": "Automating Amazon's Application Process",
-		"url": "amazonApplicationAutomation",
-		"date": "29/6/2019"
+		"name": "Making You Own HD44780 Driver for the STM32F1 Series",
+		"tag": "Writing drivers can be intimidating, but the best way to learn is to do it. Here's my guide to making your own HD44780 LCD driver for STM32 processors.",
+		"url": "HD44780",
+		"date": "11/9/2020"
 	}
 ]
