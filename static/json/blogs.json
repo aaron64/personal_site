@@ -1,8 +1,8 @@
 [
 	{
-		"name": "Making You Own HD44780 Driver for the STM32F1 Series",
-		"tag": "Writing drivers can be intimidating, but the best way to learn is to do it. Here's my guide to making your own HD44780 LCD driver for STM32 processors.",
-		"url": "HD44780",
-		"date": "11/9/2020"
+		"name": "Creating Images, Animations, and Fonts on SSD130x Controllers",
+		"tag": "Display drivers can be very limiting, here we will easily create a workflow to get pixel images, animations, and fonts to display on SSD130x OLED controllers",
+		"url": "SSD130x",
+		"date": "2/11/2020"
 	}
 ]

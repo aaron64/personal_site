@@ -2,8 +2,9 @@
   <div class="col-md-6 blog-lists">
   	{% for blog in blogs %}
   		<div class="">
-	  		<h2><a href="{{ '/blog/%s'%blog.url }}">{{blog.name}}</a></h2>
-	  		<h4>{{blog.tag}}</h4>  	
+	  		<h2><a href="{{ '/blog/%s'%blog.url }}" class="text-dark">{{blog.name}}</a></h2>
+	  		<i>{{blog.date}}</i>
+	  		<h4 class="text-secondary">{{blog.tag}}</h4>  	
 			  <hr>
 		</div>
   	{% endfor %}

@@ -1,7 +1,7 @@
 	<div class="container-fluid m-0">
 		<div class="row justify-content-center w-100">
 				{% if blog != '' %}
-					<div class="col-8">
+					<div class="col-sm-6">
 						{% filter markdown %}
 							{%include ('blogs/' + blog + '.md') %}
 						{% endfilter %}

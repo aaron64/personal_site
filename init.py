@@ -46,22 +46,22 @@ def contact():
     site += render_template("footer.html")
     return site
 
-# @app.route('/blog/')
-# def blog_list():
-#     site = render_template("header.html")
-#     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-#     json_url = os.path.join(SITE_ROOT, "static/json", "blogs.json")
-#     data = json.load(open(json_url))
-#     site += render_template("blogList.html", blogs=data)
-#     site += render_template("footer.html")
-#     return site
+@app.route('/blog/')
+def blog_list():
+    site = render_template("header.html")
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "static/json", "blogs.json")
+    data = json.load(open(json_url))
+    site += render_template("blogList.html", blogs=data)
+    site += render_template("footer.html")
+    return site
 
-# @app.route('/blog/<b>')
-# def blog(b = None):
-#     site = render_template("header.html")
-#     site += render_template("blog.html", blog=b)
-#     site += render_template("footer.html")
-#     return site
+@app.route('/blog/<b>')
+def blog(b = None):
+    site = render_template("header.html")
+    site += render_template("blog.html", blog=b)
+    site += render_template("footer.html")
+    return site
 
 @app.after_request
 def add_header(r):

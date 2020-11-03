@@ -561,6 +561,11 @@ pre code {
   word-break: normal;
 }
 
+code {
+  display: block;
+  white-space: pre-wrap;
+}
+
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
