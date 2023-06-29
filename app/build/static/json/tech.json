@@ -1,0 +1,33 @@
+{
+	"tech": [
+		["Java", "code"],
+		["C", "code"],
+		["C++", "code"],
+		["JavaScript", "code"],
+		["HTML5", "code"],
+		["SQL", "code"],
+
+		["Android", "framework"],
+		["Flask", "framework"],
+		["Bootstrap", "framework"],
+		["SFML", "framework"],
+		["Spring", "framework"],
+		["Node / NPM", "framework"],
+		["Angular", "framework"],
+
+		["Docker", "os"],
+		["Bash", "os"],
+		["Linux", "os"],
+		["Git", "os"],
+		["AWS", "os"],
+		["OpenStack", "os"],
+		["Concourse", "os"],
+
+		["STM32F4xx (Arm Cortex-M4)", "hardware"],
+		["Espressif ESP32", "hardware"],
+		["Raspberry Pi", "hardware"],
+		["Arduino", "hardware"],
+		["Soldering", "hardware"],
+		["Home Automation", "hardware"]
+	]
+}

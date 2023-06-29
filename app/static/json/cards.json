@@ -1,0 +1,43 @@
+[
+	{
+		"name": "Tuxera Inc.",
+		"type": "work",
+		"time": "Fall 2021 - Current",
+		"position": "Embedded Software Engineer",
+		"bullets": ["Created automated testing framework for many of our embedded flash filesystems",
+					"Created product demo comparing our embedded filesystem powerfail capabilities against FatFS on STM32 hardware",
+					"Helped with testing efforts on enterprise-grade network storage solutions"]
+	},
+	{	
+		"name": "Pinkaloo Technologies",
+		"type":	"work",
+		"time":	"Winter 2020 - Fall 2021",
+		"position":	"Software Engineer",
+		"bullets": ["Extensive work on back-end: Creating API endpoints, managing databases, configuring various AWS services, and implementing new internal services",
+					"Centralized entire mail system into one micro-service",
+					"Automated front-end testing and security audits on our back-end and front-end, logging results daily to Slack through our CD/CI pipeline tool"]
+	},
+	{
+		"name": "UF Surgeon Simulation Lab",
+		"type": "work",
+		"time": "Fall 2019",
+		"position": "Research Assistant",
+		"bullets": ["Worked on custom Blender plug-in (python) to export complex 3D objects and lighting to XML for use in simulation engines",
+					"Updated entire team’s version control from mercurial to git",
+					"Product to be used in human and veterinarian surgeon training"]
+	},
+	{
+		"name": "Ultimate Software Internship",
+		"type": "work",
+		"time": "Summer 2018",
+		"position": "Architecture Team",
+		"bullets": ["Streamlined the company’s documentation process by developing containerized instances of the documentation website, reducing downtime on the production site"]
+	},
+	{
+		"name": "Ultimate Software Internship",
+		"type": "work",
+		"time": "Summer 2017",
+		"position": "Internal Software Team",
+		"bullets": ["Redesigned change-management process used throughout the company in order to save work time by creating a full-stack web application to manage request forms"]
+	}
+]

@@ -1,4 +1,7 @@
 Flask-FlatPages
 Flask-Markdown
+Frozen-Flask
+Flask-FlatPages
 Flask
 mistune
+gunicorn

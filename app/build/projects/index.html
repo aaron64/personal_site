@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#ffffff" />
+  <title>Aaron Chambers</title> 
+  <link rel="shortcut icon" href="/static/favicon.ico">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <!-- FontAwesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+  <!-- Bootstrap Slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/bootstrap-slider.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/css/bootstrap-slider.min.css">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="/static/css/theme-litera-custom.css"></link>
+
+  <script type=text/javascript src="/static/scripts/main.js"></script>
+
+  <style>
+    html, body {
+      overflow-x: hidden;
+    }
+    @media (min-width: 576px) {
+      body {
+        margin-top: 75px;
+      }
+    }
+
+    .nav-phone {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  </style>
+</head> 
+<body style='display: none;' background='/static/images/bg/circuit.png'>
+  <div class="container-fluid">
+    <div class="header">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-desktop d-none d-sm-none d-md-flex" id="navbar">
+        <div class="container">
+          <a class="navbar-brand mr-1 mb-1 mt-0" href="/"><img src="/static/images/logo.png" height=68></a>
+          <div class="navbar-collapse collapse justify-content-center">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/resume/">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/projects/">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog/">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact/">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://github.com/aaron64/"><i class="fab fa-github" style="font-size:24px"></i></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-phone d-block d-sm-none" id="navbar">
+        <div class="container">
+          <div class="navbar-collapse justify-content-center">
+            <ul class="navbar-nav ml-auto">
+              <div class="row">
+                <div class="col-8"><a class="navbar-brand mr-1 mb-1 mt-0" href="/">Aaron Chambers</a></div>
+                <div class="col-2 nav-item text-right pr-0">
+                  <a class="nav-link" target="_blank" href="https://github.com/aaron64/"><i class="fab fa-github" style="font-size:24px"></i></a>
+                </div> 
+                <div class="col-2 nav-item text-center pl-0">
+                  <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
+                </div>
+              </div>
+              <div class="row justify-content-center"> 
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/">Resume</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/projects/">Portfolio</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/blog/">Blog</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/contact/">Contact</a>
+                </div>
+              </div> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <div class="m-5"><div class="row justify-content-center">
+  <div class="col-md-4 project-lists">
+  	
+  		<div class="">
+	  		<h2>HD44780 Driver for STM32F1xx</h2>
+	  		<h4>A driver for the HD44780 LCD controller</h4>
+	  		
+	  			<a class="" target="_blank" href="https://github.com/aaron64/STM32F1xx-HD44780-Driver"><i class="fab fa-github" style="font-size:24px"></i></a>
+	  		
+		  	<p>I created this driver to better understand ARM development with C. This driver connects to a HD44780 LCD controller to perform writes, reads, and inserting custom characters beyond ASCII. There are additional functions such as:</p>
+<ul>
+<li>Printf style formatting</li>
+<li>Printing in reverse</li>
+<li>Clearing screen</li>
+<li>Changing cursor type</li>
+</ul>
+<div class="row">
+    <div class="col-md-6">
+        <img class="d-block img-fluid img-border float-left" src="/static/images/HD44780/HelloWorld.jpg">
+    </div>
+</div>
+		  	
+			  <hr>
+		</div>
+  	
+  		<div class="">
+	  		<h2>Ein</h2>
+	  		<h4>Personal Server</h4>
+	  		
+		  	<p>Ein is my collection of computers used for various server-like purposes physically located in my closet.
+It consists of Ein, a custom built PC to serve as a media server and NAS, and a Raspberry Pi cluster for use as a docker test environment.</p>
+<div class="row">
+    <div class="col-md-6">
+        <img class="d-block img-fluid img-border float-left" src="/static/images/ein/diagram.png">
+    </div>
+    <div class="col-md-6">
+        <img class="d-block img-fluid img-border float-right" src="/static/images/ein/ein0.jpg">
+    </div>
+</div>
+		  	
+			  <hr>
+		</div>
+  	
+  		<div class="">
+	  		<h2>Jist!</h2>
+	  		<h4>Article Summarization App</h4>
+	  		
+	  			<a class="" target="_blank" href="https://github.com/aaron64/Jist-App"><i class="fab fa-github" style="font-size:24px"></i></a>
+	  		
+		  	<p>Jist is a full-stack application developed with Nick Young for our senior project class. Jist takes RSS feeds from major news publishers, parses, summarizes, and stores the articles, and displays them to a front-end application. Curated publishers includes CNN, NY Times, Huffington Post, and NPR.</p>
+<p><img class="d-block img-fluid" src="/static/images/jist/jist_diagram.png"> </p>
+		  	
+			  <hr>
+		</div>
+  	
+  		<div class="">
+	  		<h2>Py-Lights</h2>
+	  		<h4>MIDI to LED Live Visuals</h4>
+	  		
+	  			<a class="" target="_blank" href="https://github.com/aaron64/py-lights"><i class="fab fa-github" style="font-size:24px"></i></a>
+	  		
+		  	<p>Py-Lights (name pending...) is a python program that assigns MIDI inputs to programmable actions that in turn create effects for LED lights. Different settings can be applied to designate which knob, key, or pad performs which action.</p>
+<p><a href="https://www.raspberrypi.org/blog/midi-controlled-led-lights-raspberry-pi/">Here is a blog post</a> from the official Raspberry Pi blog featuring Py-Lights.</p>
+<iframe src="https://www.youtube.com/embed/ARbRODReZN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		  	
+			  <hr>
+		</div>
+  	
+  		<div class="">
+	  		<h2>Honey Do</h2>
+	  		<h4>Android TODO Application</h4>
+	  		
+	  			<a class="" target="_blank" href="https://github.com/aaron64/honeydo5-android"><i class="fab fa-github" style="font-size:24px"></i></a>
+	  		
+		  	<p>HoneyDo is a task management android app designed for quick and intuitive user experience and privacy.</p>
+<p>HoneyDo features:</p>
+<ul>
+<li>Cloud storage using MongoDB as a database</li>
+<li>Login profiles in order to easily migrate to different devices while maintainig priavcy</li>
+<li>Ability to add, edit, and set notifications for tasks</li>
+</ul>
+<p>I worked on HoneyDo with 4 other students in my Software Engineering course over a semester. Since we split up the work I primarily designed and created the front end while also working on the API functionality to tie the front-end to the back-end.</p>
+<div class="row">
+    <div class="col-6">
+        <img class="d-block img-fluid img-border" src="/static/images/honeyDo/HoneyDo_03.png">
+        <i>Creating a task</i>
+    </div>
+</div>
+		  	
+			  <hr>
+		</div>
+  	
+  		<div class="">
+	  		<h2>Change Management 2.0</h2>
+	  		<h4>Web UI for Change Management Process</h4>
+	  		
+		  	<p>I worked on this project during my frist internship at Ultimate Software. The web application is used internally to schedule and approve changes to company services. I spent most of my time redesigning the front-end with additional work handeling the API and database for the projcet.</p>
+<p><img class="w-100 h-100 expandable img-fluid img-border" src="/static/images/cm2.0/Ultimate_site1.png"> </p>
+		  	
+			  <hr>
+		</div>
+  	
+  </div>
+</div>
+<script type=text/javascript src="/static/scripts/projects.js"></script></div>
+<footer class="mt-5 footer">
+<!-- 	<div class="bg-light text-dark text-center mb-0">
+	<p class="mb-0">Made with:</p>
+	<p class="mb-0">
+		<img width=32 height=32 alt="Docker" src="/static/images/icons/docker.png">
+		<img width=32 height=32 alt="Flask" src="/static/images/icons/flask.png">
+		<img width=32 height=32 alt="Raspberry Pi" src="/static/images/icons/pi.png">
+		<img width=32 height=32 alt="jQuery" src="/static/images/icons/jquery.png">
+		<img width=32 height=32 alt="Bootstrap" src="/static/images/icons/bootstrap.png">
+	</p>
+	<p class="mb-0"><b>aaron.chambers81@gmail.com &ensp; | &ensp; (352)283-1401</b></p>
+	</div> -->
+</footer>
+</body>
+</html>

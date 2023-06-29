@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#ffffff" />
+  <title>Aaron Chambers</title> 
+  <link rel="shortcut icon" href="/static/favicon.ico">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <!-- FontAwesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+  <!-- Bootstrap Slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/bootstrap-slider.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.2.1/css/bootstrap-slider.min.css">
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="/static/css/theme-litera-custom.css"></link>
+
+  <script type=text/javascript src="/static/scripts/main.js"></script>
+
+  <style>
+    html, body {
+      overflow-x: hidden;
+    }
+    @media (min-width: 576px) {
+      body {
+        margin-top: 75px;
+      }
+    }
+
+    .nav-phone {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  </style>
+</head> 
+<body style='display: none;' background='/static/images/bg/circuit.png'>
+  <div class="container-fluid">
+    <div class="header">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light nav-desktop d-none d-sm-none d-md-flex" id="navbar">
+        <div class="container">
+          <a class="navbar-brand mr-1 mb-1 mt-0" href="/"><img src="/static/images/logo.png" height=68></a>
+          <div class="navbar-collapse collapse justify-content-center">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/resume/">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/projects/">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog/">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact/">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://github.com/aaron64/"><i class="fab fa-github" style="font-size:24px"></i></a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light nav-phone d-block d-sm-none" id="navbar">
+        <div class="container">
+          <div class="navbar-collapse justify-content-center">
+            <ul class="navbar-nav ml-auto">
+              <div class="row">
+                <div class="col-8"><a class="navbar-brand mr-1 mb-1 mt-0" href="/">Aaron Chambers</a></div>
+                <div class="col-2 nav-item text-right pr-0">
+                  <a class="nav-link" target="_blank" href="https://github.com/aaron64/"><i class="fab fa-github" style="font-size:24px"></i></a>
+                </div> 
+                <div class="col-2 nav-item text-center pl-0">
+                  <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/aaron-chambers-0b7221a2/"><i class="fab fa-linkedin" style="font-size:24px"></i></a>
+                </div>
+              </div>
+              <div class="row justify-content-center"> 
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/">Resume</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/projects/">Portfolio</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/blog/">Blog</a>
+                </div>
+                <div class="col-4 nav-item">
+                  <a class="nav-link text-center" href="/contact/">Contact</a>
+                </div>
+              </div> 
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <div class="m-5">	<div class="container-fluid m-0">
+		<div class="row justify-content-center w-100">
+				
+					<div class="col-sm-6">
+						<h1>Creating Images, Animations, and Fonts on SSD130x Controllers</h1>
+<p>Recently I've been playing around with some OLED displays on a Raspberry PI. These are dot-matrix displays where you feed it enough bytes and it prints some image to the screen. The official libraries I have received from the manufactures provide setting individual pixels, drawing bitmaps along with some stock images they hard coded into the header files as byte arrays, and char/string rendering, with some really ugly fonts, which are also hard coded in the headers.</p>
+<p>Focusing on bitmaps, understanding the structure of the buffers they want is pretty straight forward. Each byte represents 8 bits that go across the screen until it hits the width carried to the function, then it goes to the next line. </p>
+<p><code>void SSD1309_bitmap(unsigned char x, unsigned char y, const unsigned char *pBmp, unsigned char chWidth, unsigned char chHeight);</code></p>
+<p>This gives us a basic framework to display images, however there are some caveats...</p>
+<h2>The ugly</h2>
+<ul>
+<li>Creating images using byte arrays is very time consuming. I was able to save an image as C code in Gimp by exporting as .xbm, however the endianness was backwards to what the driver code wanted and there wasn't any extra data about the image (such as width and height)</li>
+<li>Speaking of width and height, it's kind of ugly that you have to pass that in with the buffer. You should be able to pass in an object that ties everything the image needs nicely</li>
+<li>The fonts supplied in the driver were pretty bad, taking an image of an ASCII font and having our code map out the characters as an easy way to find, create, and edit fonts for our screens</li>
+<li>No animations. If I want animations I need to have multiple arrays that swap every so often</li>
+</ul>
+<p><img alt="A much nicer font on opengameart.org" src="https://opengameart.org/sites/default/files/font_5.png" /></p>
+<p><em>A much nicer font I found on <a href="https://opengameart.org/">opengameart.org</a></em></p>
+<p>With these issues in mind it's clear we need a file format to handle these things, and an easy way to create these images. This is what I came up with</p>
+<h2>Let's make a file format!</h2>
+<p>Here is the structure I came up with for my file format:</p>
+<table class="table">
+  <tbody>
+    <tr>
+      <th>byte 0</th>
+      <th>byte 1</th>
+      <th>byte 2</th>
+      <th>byte 3</th>
+      <th>byte 4</th>
+      <th></th>
+      <th>byte n+4</th>
+    </tr>
+    <tr>
+      <td>version</td>
+      <td>width</td>
+      <td>height</td>
+      <td>frames</td>
+      <td>data[0]</td>
+      <td>...</td>
+      <td>data[n]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>With just this information we have enough to handle images, ASCII fonts, and animations. </p>
+<p>Now we just need to have a way to quickly create these images</p>
+<h2>Writing a plugin</h2>
+<p>Aseprite is the best candidate to make a plugin for. It is made for pixel art, supports animation, and supports scripting in Lua. The script can be found <a href="https://github.com/aaron64/Asprite_SSD1305_save.git">here</a>. I'll go over some of the main bits here, most of the script is setting up the file / GUI.</p>
+<p>Write version (0), width and height</p>
+<p><code>-- meta data
+file:write(string.char(0))
+file:write(string.char(width))
+file:write(string.char(height))</code></p>
+<p>Write number of frames</p>
+<p><code>local frames = 0
+for c, cel in ipairs(fsprite.cels) do
+    frames = frames + 1
+end
+file:write(string.char(frames))</code></p>
+<p>Iterate the flattened image to write every 8 pixels as a hex char, the threshold for a pixel being on or off depends on the image pixel's value at 128 ( &gt; 128 is ON, &lt;= 128 is OFF)</p>
+<p><code>
+-- image data
+local zeroPadding = fsprite.width-((fsprite.width/8)*8)
+local bytes = math.ceil(width/8.0)
+for c, cel in ipairs(fsprite.cels) do
+    local fimage = cel.image
+    for y = 0, fsprite.height - 1 do
+        for b = 0, bytes - 1 do
+            local byte = 0
+            for x = 0, 7 do
+                local px = app.pixelColor.grayaV(fimage:getPixel(x + b * 8, y))
+                if px &gt; 128 then
+                    px = 1
+                else
+                    px = 0
+                end
+&nbsp;
+                byte = byte | (px &lt;&lt; x)
+                px = 0
+            end
+            file:write(string.char(byte))
+        end
+    end
+end
+</code></p>
+<p>Running our script on  an animation gives us something like this:</p>
+<p><code>0080 2010 0000 0000 0000 0000 0000 0000
+0000 0000 0000 00fa ffff ffff ffff ffff
+1f00 0000 0000 0008 0000 0000 0000 0000
+1000 0000 0000 00c8 ff3f 00ff ff00 feff
+1700 0000 0000 00e8 ff7f 80ff ff01 feff
+1700 0000 0000 00ea ff7f 80ff ff01 feff
+1700 0000 0000 00e8 ff7f 80ff ff01 feff
+1700 0000 0000 00e8 ff7f 80ff ff01 feff</code></p>
+<p>You can see the metadata in the first 4 bytes:
+0x00 (version)
+0x80 (width = 128)
+0x20 (height = 32)
+0x10 (10 frame animation)</p>
+<p>One limitation is the width and height are capped at 256, however most of these displays are smaller than that, if needed you can always append more bytes to a value in the file.</p>
+<h2>Modifying our library</h2>
+<p>The library I will be modifying can be found <a href="https://www.waveshare.com/wiki/2.23inch_OLED_HAT">here</a>, however any library that can display bitmaps in a similar manner will work. This library is for the SSD1305 but has worked fine on SSD1309 devices as well.</p>
+<p><img alt="SSD1309 bitmap class structure" src="https://i.imgur.com/n5Ti3st.png" /></p>
+<p>Here we have an image, font, and animation class, which all extend from a file class.</p>
+<h3>SSDFile</h3>
+<p>The file class contains a simple constructor with the file path as a parameter and a protected byte pointer to store the file data:</p>
+<p><code>class SSD1309File
+{
+protected:
+    uint8_t *_data;
+public:
+    SSD1309File(std::string filePath);
+};</code></p>
+<p>The constructor is quite simple as well, reading the file and storing the data in data</p>
+<p><code>
+SSD1309File::SSD1309File(std::string filePath)
+{
+    std::ifstream file(filePath, std::ios::out | std::ios::binary);
+    if(!file)
+    {
+        std::cout &lt;&lt; "Could not find file" &lt;&lt; std::endl;
+        return;
+    }
+&nbsp;
+    file.seekg(0, std::ios::end);
+    size_t length = file.tellg();
+    file.seekg(0, std::ios::beg);
+    this-&gt;_data = new uint8_t[length];
+    file.read((char*)_data, length);
+}
+</code></p>
+<h3>SSDImage</h3>
+<p>The image class has a few extra members:
+* width
+* height
+* imageData</p>
+<p>These values can be pulled from the data in the file's constructor. When rendering simply call the SSD130x libraries draw function
+<code>SSD1309_bitmap(x, y, this-&gt;_imageData,this-&gt;_width, this-&gt;_height);</code></p>
+<h3>SSDAnimation</h3>
+<p><img alt="Creating an animation in Aseprite" src="https://i.imgur.com/BdhkN8k.png" /></p>
+<p>The animation class is identical to the image class, but includes data for the amount of frames. Each frames size (width * height) is stored in frameSize which we can use to offset the buffer when rendering with pointer arithmetic. I also use a timer class that checks the current time when rendering to decide when to increment frames.</p>
+<p><code>
+void SSD1309Animation::render(int16_t x, int16_t y)
+{
+    // Render current frame
+    SSD1309_bitmap(x, y, this-&gt;_imageData + this-&gt;_currentFrame * this-&gt;_frameSize,this-&gt;_width, this-&gt;_height);
+&nbsp;
+    // If the timer is done and we have more frames
+    if(this-&gt;_timer-&gt;done() &amp;&amp; this-&gt;_currentFrame &lt;= this-&gt;_frames-1)
+    {
+        this-&gt;_currentFrame++;
+        this-&gt;_timer-&gt;start();
+    }
+&nbsp;
+    // If we go past the amount of frames, either stop or loop
+    if (this-&gt;_currentFrame &gt;= this-&gt;_frames)
+    {
+        if(this-&gt;_loop)
+            this-&gt;_currentFrame = 0;
+        else
+            this-&gt;_done = true;
+    }
+}
+</code></p>
+<p>Loop is passed in as an optional parameter
+<code>SSD1309Animation(std::string filePath, uint16_t rate, bool loop=false);</code></p>
+<h3>SSDFont</h3>
+<p>Font's are actually very similar to animations, but instead of each frame being a slice in time it's used to slice the sprite into each character. 
+<img alt="Slicing an image in Aseprite" src="https://i.imgur.com/m5kPpve.png" /></p>
+<p>Rendering a font also requires some pointer arithmetic, in this case frameSize is the size of each character on the sprite and I am offsetting the character left by ' ' (32) as the first 32 ASCII chars are not included in this font so I removed them.
+<code>void SSD1309Font::render(std::string str, int16_t x, int16_t y)
+{
+    for(unsigned int i = 0; i &lt; str.size(); i++)
+    {
+        uint8_t c = str[i] - ' ';
+        SSD1309_bitmap(x + this-&gt;_width * i, y, 
+            this-&gt;_imageData + c * this-&gt;_frameSize, this-&gt;_width, this-&gt;_height);
+    }
+}</code></p>
+<h2>Conclusion</h2>
+<p>Without too much work we can now more easily display images, animations, and fonts on our screens! Some final reminders:
+* We only use 1 byte for width and height, limiting our sprite size to 256
+* Animations and fonts are also limited to 256 frames/characters
+* All 3 bitmap types are being sent to the same render function in the library. At the end of the day the screen just wants some bytes!
+* If your image is flipped every 8 pixels, you need to change the endianness of either the library or the Lua script</p>
+<p><img alt="Final result showing an image and some text" src="https://i.imgur.com/yHxuEQj.jpg?1" /></p>
+					</div>
+				
+		</div>
+	</div>
+</div></div>
+<footer class="mt-5 footer">
+<!-- 	<div class="bg-light text-dark text-center mb-0">
+	<p class="mb-0">Made with:</p>
+	<p class="mb-0">
+		<img width=32 height=32 alt="Docker" src="/static/images/icons/docker.png">
+		<img width=32 height=32 alt="Flask" src="/static/images/icons/flask.png">
+		<img width=32 height=32 alt="Raspberry Pi" src="/static/images/icons/pi.png">
+		<img width=32 height=32 alt="jQuery" src="/static/images/icons/jquery.png">
+		<img width=32 height=32 alt="Bootstrap" src="/static/images/icons/bootstrap.png">
+	</p>
+	<p class="mb-0"><b>aaron.chambers81@gmail.com &ensp; | &ensp; (352)283-1401</b></p>
+	</div> -->
+</footer>
+</body>
+</html>

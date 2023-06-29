@@ -1,0 +1,36 @@
+[
+	{
+		"name": "HD44780 Driver for STM32F1xx",
+		"tag": "A driver for the HD44780 LCD controller",
+		"url": "HD44780",
+		"git": "https://github.com/aaron64/STM32F1xx-HD44780-Driver"
+	},
+	{
+		"name": "Ein",
+		"tag": "Personal Server",
+		"url": "ein"
+	},
+	{
+		"name": "Jist!",
+		"tag": "Article Summarization App",
+		"url": "jist",
+		"git": "https://github.com/aaron64/Jist-App"
+	},
+	{
+		"name": "Py-Lights",
+		"tag": "MIDI to LED Live Visuals",
+		"url": "py-lights",
+		"git": "https://github.com/aaron64/py-lights"
+	},
+	{
+		"name": "Honey Do",
+		"tag": "Android TODO Application",
+		"url": "honeyDo",
+		"git": "https://github.com/aaron64/honeydo5-android"
+	},
+	{
+		"name": "Change Management 2.0",
+		"tag": "Web UI for Change Management Process",
+		"url": "cm2.0"
+	}
+]
